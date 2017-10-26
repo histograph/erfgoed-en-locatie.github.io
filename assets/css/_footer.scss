@@ -12,10 +12,10 @@
     display: inline-block;
     margin: 0 0.5em;
     text-transform: uppercase;
-    color: $font-color;
+    color: $color-text;
 
     &:hover {
-      border-bottom-color: $font-color;
+      border-bottom-color: $color-text;
     }
   }
 }

@@ -1,11 +1,11 @@
 header {
-  background-color: $brand-color;
+  background-color: $color-primary;
   margin-top: 0;
 
   &.header-default {
     position: fixed;
     width: 100%;
-    height: $header-height;
+    height: $height-header;
     top: 0;
     left: 0;
     z-index: 1000;
@@ -18,8 +18,8 @@ header {
     sup {
       vertical-align: super;
       top: -1em;
-      padding: 0.1em 0.25em;
-      background: $link-color;
+      padding: 0.15em 0.3em;
+      background: $color-link;
       color: #FFF;
       font-size: 11px;
       text-transform: uppercase;
@@ -31,7 +31,7 @@ header {
   a.logo {
     margin-left: 1rem;
     font-size: 24px;
-    line-height: $header-height;
+    line-height: $height-header;
 
     &:hover {
       border-bottom-color: transparent;
@@ -49,9 +49,9 @@ header {
 
     &:hover,
     &.current {
-      color: $font-color;
+      color: $color-text;
       text-decoration: none;
-      border-bottom: 1px solid $font-color;
+      border-bottom: 1px solid $color-text;
     }
   }
 
@@ -76,7 +76,7 @@ header {
     text-transform: uppercase;
     letter-spacing: 0.15em;
     font-size: 0.85em;
-    line-height: $header-height;
+    line-height: $height-header;
   }
 }
 
@@ -107,8 +107,12 @@ header {
   color: #000;
   margin-bottom: 2.5rem;
 
+  input {
+    width: 100%;
+  }
+
   input,
   button {
-    margin-bottom: 4px;
+    margin-bottom: 0.25em;
   }
 }

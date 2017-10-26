@@ -12,7 +12,7 @@ Erfgoedinstellingen kunnen zelf een dataset met PiTs maken en aanleveren. Een me
 Dit artikel geeft een aantal voorbeelden van PiTs die je in zo'n dataset op kan nemen.
 
 
-##Aanleg van een bestaande straat dateren
+## Aanleg van een bestaande straat dateren
 
 Het in ErfGeo opgenomen Nationaal Wegenbestand (NWB) bevat alle huidige straten van Nederland, maar vertelt niet wanneer een straat is ontstaan. Nou weet ik dat het Wevershof in De Rijp rond 1971 is aangelegd. Die straat aanpassen in de NWB zelf is niet mogelijk. Immers, ErfGeo bevat data uit bronnen, en alleen als de data in de bron wijzigt kan de wijziging vervolgens in ErfGeo worden geïmporteerd. 
 

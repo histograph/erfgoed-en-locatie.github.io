@@ -2,8 +2,7 @@
 <h1>Doorzoek de Geothesaurus</h1>
 
 <form action="<?php echo $this->config->item('base_url') ?>">
-  <input style="width:50%;" value="<?php echo $q; ?>" type="text" class="floatinput form-control" name="q" />
-  <button class="button">zoek</button>
+  <input style="width:50%;" value="<?php echo $q; ?>" type="text" class="floatinput form-control" name="q" /><button>zoek</button>
 </form>
 
 <div class="content-block">

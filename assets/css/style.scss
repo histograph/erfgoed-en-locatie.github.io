@@ -1,35 +1,33 @@
 ---
 ---
 
-$font-color: {{ site.data.style.font-color }};
-$background-color: {{ site.data.style.background-color }};
-$box-color: {{ site.data.style.box-color }};
-$brand-color: {{ site.data.style.brand-color }};
-$brand-color-alt: darken($brand-color, 50%);
-$link-color: {{ site.data.style.link-color }};
+$color-primary:   #99ddee;
+$color-secondary: #115577;
+//$color-link:      #EE2244;
+//$color-primary:   #a8fab1;
+//$color-secondary: #395c3d;
+$color-link:      #f54545;
+$color-bg:        #F7F7F7;
+$color-box:       #FFFFFF;
+$color-box-item:  darken($color-box, 4%);
+$color-text:      #000000;
 
-$tiny-margin: 0.5rem;
-$standard-margin: 1rem;
-$big-margin: 1.5rem;
-$bigger-margin: 2rem;
-
-$sidebar-width: 450px;
-$header-height: 38px;
-
+$width-sidebar: 450px;
+$height-header: 42px;
 
 @import "normalize";
-@import "skeleton";
-
 @import "leaflet";
 
 @import "fonts";
-@import "text";
+@import "grid";
+@import "typography";
 @import "links";
+@import "forms";
 @import "tables";
 @import "header";
 @import "footer";
-@import "viewer";
-
+@import "search-map";
+@import "search-textual";
 
 * {
   box-sizing: border-box;
@@ -42,35 +40,33 @@ html, body {
 body {
   margin: 0;
   padding:0;
-  background-color: $background-color;
+  background-color: $color-bg;
 }
 
-// general classes
-.table-container {
-  display: table;
-  height: 100%;
-  width: 100%;
+img {
+  max-width: 100%;
+  height: auto;
 }
 
-.table-block {
-  display: table-row;
-  height: 1px;
+time.published {
+  float: right;
+  margin: 0 0 1em 2em;
+  padding: 0 0.5em;
+  font-size: 14px;
+  background-color: $color-box-item;
+  border-radius: 0.25em;
 }
 
-#content {
-  max-width: 800px;
-  margin: 5em auto 1em auto;
+.author {
+  margin-bottom: 3rem;
+  text-transform: uppercase;
+  font-size: 13px;
 
-  &.wide {
-    max-width: none;
+  h1 + & {
+    margin-top: -1rem;
   }
 }
 
-.row-flex {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
 
 .right, 
 .float-right {
@@ -104,87 +100,4 @@ body {
 .id {
   font-family: monospace;
   font-size: 1.5rem;
-}
-
-time.published {
-  float: right;
-  margin: 0 0 1em 2em;
-  padding: 0 0.5em;
-  font-size: 14px;
-  background-color: darken($background-color, 2%);
-  border-radius: 0.25em;
-}
-
-.author {
-  margin-bottom: 3rem;
-  text-transform: uppercase;
-  font-size: 13px;
-
-  h1 + & {
-    margin-top: -1rem;
-  }
-}
-
-
-// img
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-
-// 
-.content-block {
-  background-color:#fff;
-  margin-bottom: 3rem;
-  padding: 1.5rem;
-  box-shadow: 0px 1px 5px rgba(50, 50, 50, 0.14);
-
-  .list & {
-    margin-bottom: 1.5rem; 
-  }
-}
-
-
-// geothesaurus
-.pvf-icon{
-	width: 16px;
-}
-.light{
-	color: #ccc;
-}
-.CodeMirror {
-  background-color: $background-color !important;
-  font-size: 0.9em;
-}
-
-table.sortable th.asc:before{
-	content: '\25b4';
-}
-table.sortable th.desc:before{
-	content: '\25be';
-}
-
-#results {
-  margin-top: 2rem;
-
-  a.result {
-    display: block;
-    margin-bottom: 0.8em;
-    padding: 0.5em;
-    background-color: darken($box-color, 4%);
-    border-right: 3px solid darken($box-color, 4%);
-    border-left: 0 solid transparent;
-    color: $font-color;
-
-    &:hover {
-      border-left: 3px solid $link-color;
-      border-right: 0 solid transparent;
-      border-bottom-color: transparent;
-    }
-  }
-}
-
-#content #search {
-  float: right;
 }

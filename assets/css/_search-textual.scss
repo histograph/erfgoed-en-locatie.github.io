@@ -1,0 +1,42 @@
+
+.pvf-icon{
+  width: 16px;
+}
+.light{
+  color: #ccc;
+}
+.CodeMirror {
+  background-color: $color-bg !important;
+  font-size: 0.9em;
+}
+
+table.sortable th.asc:before{
+  content: '\25b4';
+}
+table.sortable th.desc:before{
+  content: '\25be';
+}
+
+#results {
+  margin-top: 2rem;
+
+  a.result {
+    display: block;
+    margin-bottom: 0.8em;
+    padding: 0.5em;
+    background-color: $color-box-item;
+    border-right: 3px solid $color-box-item;
+    border-left: 0 solid transparent;
+    color: $color-text;
+
+    &:hover {
+      border-left: 3px solid $color-link;
+      border-right: 0 solid transparent;
+      border-bottom-color: transparent;
+    }
+  }
+}
+
+#content #search {
+  float: right;
+}
