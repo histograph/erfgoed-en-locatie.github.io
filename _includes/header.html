@@ -1,35 +1,6 @@
-<header>
-  <nav>
-    <div class="container">
-      <div class="row">
-        <div class="two columns">
-          <a href="{{ site.baseurl }}/" id="logo">
-            <span>Erf</span>Geo</a>
-          </a>
-        </div>
-        <div class="ten columns">
-          <div id="mainmenu">
-          
-          
-            {% for item in site.data.menu %}
-            
-              {% assign url = page.url | replace_first:'/','' | split:"/" | first %}
-              {% if item.name == url %}
-              <a class="menu-item current" href="{{ site.baseurl }}/{{ item.name }}">
-              {% else %}
-                {% if item.notLocal %}
-                  <a class="menu-item" href="{{ item.name }}">
-                {% else %}
-                  <a class="menu-item" href="{{ site.baseurl }}/{{ item.name }}">
-                {% endif %}
-              {% endif %}
-                {{item.title}}</a><span class="delimiter"></span>
-            
-            {% endfor %}
-          </div>
-        </div>
-      </div>
-    </div>
-  </nav>
+<header class="header-default">
+  <a href="{{ site.baseurl }}/" class="logo">
+    <span>Erf</span>Geo</a>
+  </a>
+  {% include mainmenu.html %}
 </header>
-

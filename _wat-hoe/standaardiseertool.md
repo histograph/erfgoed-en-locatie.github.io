@@ -10,7 +10,7 @@ Wanneer u een lijst met plaatsnamen, straatnamen, adressen of bijvoorbeeld gemee
 
 Drie goede redenen om te standaardiseren worden gegeven in het artikel [Standaardiseren](standaardiseren.html).
 
-##Voorbereiding: een csv-bestand maken
+## Voorbereiding: een csv-bestand maken
 
 De Standaardiseertool verwacht een csv-bestand als input dat een kolom met de te standaardiseren toponiemen bevat. Optioneel is een tweede veld dat een 'bredere' term bevat. Als de eerste kolom een straat bevat, kan de tweede een woonplaats bevatten. Of als de eerste kolom een woonplaats bevat, kan de tweede een gemeente of provincie bevatten.
 
@@ -22,11 +22,11 @@ Vanzelfsprekend worden resultaten beter naarmate de data 'schoner' is - de term 
 
 Tot slot is het handig als de eerste rij van het csv-bestand de kolomnamen bevat.
 
-##Het csv-bestand uploaden
+## Het csv-bestand uploaden
 
 Heeft u een account gemaakt en bent u ingelogd, dan kiest u in het menu van de [standaardiseertool](http://standaardiseren.erfgeo.nl/) 'Upload dataset'. U kunt daar aangeven welk scheidingsteken uw csv-bestand hanteert om velden te scheiden om de kans op een juiste interpretatie te vergroten. Verder wijst alles zich vanzelf.
 
-##Opties ingeven
+## Opties ingeven
 
 Het scherm 'Standaardiseeropties' vraagt als eerste welk veld het toponiem bevat en vervolgens of er een 'bredere term' beschikbaar is - daar hebben we het hierboven al over gehad.
 
@@ -61,7 +61,7 @@ Hieronder is te zien welke combinaties bij de meestgebruikte typen het meeste op
 
 Het type hg:Building is wat problematisch. Weliswaar is elk gebouw uit de BAG dat groot genoeg is om een adres te bevatten opgenomen in ErfGeo, maar deze gebouwen hebben over het algemeen geen namen (soms hebben andere datasets wel een naam toegekend aan een gebouw). Zoeken op het adres dat ze bevatten kan niet met de standaardiseertool, maar middels de parameter `contains` wel met de [ErfGeoProxy](http://www.hicsuntleones.nl/erfgeoproxy/).
 
-##Standaardiseren
+## Standaardiseren
 
 U kunt eerst 20 records testen om te zien of de opgegeven instellingen iets opleveren. Vervolgens start u het standaardisatieproces met een druk op de knop 'bewaar en standaardiseer'. Zodra het standaardisatieproces is afgerond (bij grotere datasets kan dit vanzelfsprekend enige tijd duren) ontvangt u een email.
 
@@ -75,7 +75,7 @@ De tab 'Niet te achterhalen' dient om die toponiemen neer te zetten waarvan zowe
 
 U kunt het standaardisatieproces, met andere instellingen, zo vaak herhalen als u nodig acht. Zo kunt u bijvoorbeeld eerst naar plaatsen zoeken en die naar GeoNames standaardiseren, en in een tweede run naar straten en die naar de BAG standaardiseren.
 
-##Downloaden
+## Downloaden
 
 De knop 'Download csv-bestand' is te vinden op de detailpagina van de dataset. Klik daarvoor op de naam van de dataset. Uw krijgt uw originele bestand terug, aangevuld met een aantal velden dat de uri, id, naam, geometrie, type en dataset naam van het gestandaardiseerde toponiem bevat.
 

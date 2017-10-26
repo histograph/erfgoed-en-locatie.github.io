@@ -1,3 +1,5 @@
-_site
+/_site/*
+!/_site/geothesaurus
 .sass-cache
-.idea/
+.DS_Store
+Gemfile.lock

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  {% include head.html %}
+</head>
+<body>
+  <div class="table-container">
+
+    <div class="table-block footer-push">
+      {% include header.html %}
+
+      <div class="container">
+        <div id="content">
+          <h1>{{ page.title }}</h1>
+          <div class="list">{{ content }}</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="table-block">
+      {% include footer.html %}
+    </div>
+
+  </div>
+</body>
+</html>

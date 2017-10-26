@@ -1,9 +1,9 @@
-fade-in:                      false
+fade-in:               false
 
-font-color:                   "#333333"
-background-color:             "#F5F5F3"
-background-color-transparant: "rgba(249, 249, 249, 0.8)"
-brand-color:                  "#6bc6de"
-link-color:                   "#ef4f65"
+font-color:            "#000000"
+background-color:      "#f7f7f7"
+box-color:             "#ffffff"
+brand-color:           "#99ddee"
+link-color:            "#f22c5a"
 
 slogan: Nederlandse topografie door de tijd (beta)

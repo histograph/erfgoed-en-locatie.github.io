@@ -7,6 +7,13 @@ defaults:
     values:
       layout: default
 
+keep_files: [geothesaurus]
+
+sass:
+  style: expanded
+  sass_dir: assets/css
+
+
 collections:
   wat-hoe:
     output: true

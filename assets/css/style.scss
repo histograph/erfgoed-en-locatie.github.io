@@ -1,0 +1,190 @@
+---
+---
+
+$font-color: {{ site.data.style.font-color }};
+$background-color: {{ site.data.style.background-color }};
+$box-color: {{ site.data.style.box-color }};
+$brand-color: {{ site.data.style.brand-color }};
+$brand-color-alt: darken($brand-color, 50%);
+$link-color: {{ site.data.style.link-color }};
+
+$tiny-margin: 0.5rem;
+$standard-margin: 1rem;
+$big-margin: 1.5rem;
+$bigger-margin: 2rem;
+
+$sidebar-width: 450px;
+$header-height: 38px;
+
+
+@import "normalize";
+@import "skeleton";
+
+@import "leaflet";
+
+@import "fonts";
+@import "text";
+@import "links";
+@import "tables";
+@import "header";
+@import "footer";
+@import "viewer";
+
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding:0;
+  background-color: $background-color;
+}
+
+// general classes
+.table-container {
+  display: table;
+  height: 100%;
+  width: 100%;
+}
+
+.table-block {
+  display: table-row;
+  height: 1px;
+}
+
+#content {
+  max-width: 800px;
+  margin: 5em auto 1em auto;
+
+  &.wide {
+    max-width: none;
+  }
+}
+
+.row-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.right, 
+.float-right {
+  float: right;
+}
+
+.clear {
+  clear: both;
+}
+
+.hidden {
+  display: none;
+}
+
+.indent {
+  margin-left: 1em;
+}
+
+.padding {
+  padding: .8em;
+}
+
+.side-padding {
+  padding: 0 .8em;
+}
+
+.cell-padding {
+  padding-top: 6px;
+}
+
+.id {
+  font-family: monospace;
+  font-size: 1.5rem;
+}
+
+time.published {
+  float: right;
+  margin: 0 0 1em 2em;
+  padding: 0 0.5em;
+  font-size: 14px;
+  background-color: darken($background-color, 2%);
+  border-radius: 0.25em;
+}
+
+.author {
+  margin-bottom: 3rem;
+  text-transform: uppercase;
+  font-size: 13px;
+
+  h1 + & {
+    margin-top: -1rem;
+  }
+}
+
+
+// img
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+// 
+.content-block {
+  background-color:#fff;
+  margin-bottom: 3rem;
+  padding: 1.5rem;
+  box-shadow: 0px 1px 5px rgba(50, 50, 50, 0.14);
+
+  .list & {
+    margin-bottom: 1.5rem; 
+  }
+}
+
+
+// geothesaurus
+.pvf-icon{
+	width: 16px;
+}
+.light{
+	color: #ccc;
+}
+.CodeMirror {
+  background-color: $background-color !important;
+  font-size: 0.9em;
+}
+
+table.sortable th.asc:before{
+	content: '\25b4';
+}
+table.sortable th.desc:before{
+	content: '\25be';
+}
+
+#results {
+  margin-top: 2rem;
+
+  a.result {
+    display: block;
+    margin-bottom: 0.8em;
+    padding: 0.5em;
+    background-color: darken($box-color, 4%);
+    border-right: 3px solid darken($box-color, 4%);
+    border-left: 0 solid transparent;
+    color: $font-color;
+
+    &:hover {
+      border-left: 3px solid $link-color;
+      border-right: 0 solid transparent;
+      border-bottom-color: transparent;
+    }
+  }
+}
+
+#content #search {
+  float: right;
+}

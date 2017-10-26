@@ -7,21 +7,21 @@ priority: 2
 
 ErfGeo bevat data uit vele bronnen. Elk van die bronnen kan informatie bevatten over een bepaalde straat, plaats, etc. Zo'n beschrijving van één zo'n plaats of straat in één dataset noemen we een PiT.
 
-##Plaats in Tijd (PiT)
+## Plaats in Tijd (PiT)
 
 Een Plaats in Tijd, of Place in Time zo u wilt, beschrijft dus een straat, plaats, adres, gebouw, departement, etc. Elke PiT heeft in ieder geval een `type` waarin vermeld wordt waarmee we van doen hebben, een `id` (dat kan ook een uri zijn), een `name`, wellicht een `geometry` en waarschijnlijk ook een periode (`validSince` en `validUntil`).
 
 Meer dan bronnen met PiTs zit er niet in ErfGeo. Vaak zijn er meerdere PiTs die dezelfde plaats beschrijven. Een plaats als [Amsterdam](http://thesaurus.erfgeo.nl/hgconcept/?id=http://vocab.getty.edu/tgn/7006952) wordt door tientallen PiTs beschreven.
 
-##Relaties
+## Relaties
 
 Tussen PiTs kunnen relaties worden gelegd. Zo kan je bijvoorbeeld zeggen dat de ene PiT hetzelfde concept beschrijft als een andere PiT, of dat de ene PiT in een andere ligt, of dat de ene PiT is opgegaan in de andere - bijvoorbeeld bij een gemeentelijke herindeling.
 
-##HgConcepten
+## HgConcepten
 
 PiTs waarvan is aangegeven dat ze over dezelfde plaats gaan, met andere woorden PiTs die aan elkaar verbonden zijn met `hg:sameHgConcept` relaties, vormen samen een HgConcept. Die tweede relatie geeft aan dat de ene PiT een naam bevat die - bijvoorbeeld gedurende een bepaalde periode - werd of wordt gebruikt voor een PiT die een fysieke plaats beschrijft.
 
-![Het HgConcept Heiloo](/images/klont.png)
+![Het HgConcept Heiloo](/assets/images/klont.png)
 
 Zo'n HgConcept is dus een dynamisch iets: er kunnen altijd nieuwe PiTs toegevoegd worden aan ErfGeo die een bestaand HgConcept beschrijven. Ook kan het best dat verschillende PiTs binnen één HgConcept elkaar tegenspreken. De ene zegt bijvoorbeeld dat de straat in 1900 is aangelegd, de andere noemt 1910 als begindatum.
 

@@ -1,14 +1,13 @@
 ---
+title: "Blog"
+layout: list
 ---
 
-
-<h1>Blog</h1>
-
-
-<div class="content-block">
 {% assign items = site.nieuws | sort: 'priority' %}
 {% for item in items %}
-  <h3><a href="{{ item.url }}">{{ item.title }}</a></h3>
-  	<p>{{ item.created }} - {{ item.excerpt }}</p>
+  <div class="content-block">
+    <time class="published">{{ item.created | date: "%d-%m-%Y" }}</time>
+    <h3><a href="{{ item.url }}">{{ item.title }}</a></h3>
+    <p>{{ item.excerpt }}</p>
+  </div>
 {% endfor %}
-</div>

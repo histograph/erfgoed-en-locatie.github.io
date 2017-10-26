@@ -51,7 +51,7 @@ De velden die de periode beschrijven, validSince en validUntil, mogen als datum 
 
 Overigens geldt voor alle veldnamen: de precieze naamgeving maakt niet uit, tijdens het importeren worden de velden gemapt.
 
-##Een historische straatnaam toevoegen
+## Een historische straatnaam toevoegen
 
 In De Rijp loopt, ten noorden van de hoofdstraat, een klein straatje dat 't Achterom heet. Tot 1970 heette dit straatje Noorderstraat, maar in dat jaar fuseerde de gemeente De Rijp met de gemeente Graft en in die gemeente liep ook al een Noorderstraat.
 
@@ -87,7 +87,7 @@ Met een PiT die de volgende velden bevat kunnen we die informatie toevoegen:
 
 
 
-##De Beemstermeer - een verdwenen meer toevoegen
+## De Beemstermeer - een verdwenen meer toevoegen
 
 Ontginning van veen zorgde ervoor dat in de 12e eeuw het riviertje De Bamestra uitgroeide tot een binnenzee, een meer dat in open verbinding stond met de Zuiderzee. Begin 17e eeuw werd het meer drooggemaakt.
 
@@ -126,7 +126,7 @@ Omdat ErfGeo nog geen PiT van de Beemstermeer bevat, maken we er eentje aan. En 
 
 Op dezelfde wijze kan je ook een verdwenen gebouw toevoegen, al zal de geometrie daar een kleiner oppervlak beslaan.
 
-##Midden-Beemster en De Rijp - het ontstaan van een plaats dateren
+## Midden-Beemster en De Rijp - het ontstaan van een plaats dateren
 
 Tot dan de havenbuurt van Graft, splitste het rijker wordende De Rijp zich in 1607 af en werd een zelfstandige Banne. Het verderop gelegen Midden-Beemster kon vanzelfsprekend pas ontstaan na de drooglegging van de Beemstermeer.
 
@@ -188,7 +188,7 @@ Bij het leggen van de sameHgConcept relatie kan je verwijzen naar zowel een ErfG
 	</tr>
 </table>
 
-##De naam van een gebouw toevoegen
+## De naam van een gebouw toevoegen
 
 In principe heeft elk gebouw in Nederland een BAG id. Maar er zijn ook gebouwen met een welluidender naam. Zo staat het pand met BAG id 365100000000350 bekend als 'De Arend', vanwege de arend die de top van het pand siert. Die informatie kunnen we als volgt opnemen:
 
@@ -211,7 +211,7 @@ In principe heeft elk gebouw in Nederland een BAG id. Maar er zijn ook gebouwen 
 	</tr>
 </table>
 
-##Omnummeringen
+## Omnummeringen
 
 Elke archivaris weet: een adres is een dynamisch ding. Niet alleen straten veranderen van naam, ook nummeringen willen nogal eens wijzigen. Hier geven we op dat het huidige adres Oosteinde 51, bij de BAG bekend onder id 0365200000001832, tussen 1961 en 2002 bekend stond als nummer 47.
 
@@ -246,7 +246,7 @@ Elke archivaris weet: een adres is een dynamisch ding. Niet alleen straten veran
 	</tr>
 </table>
 
-##Een gemeentelijke herindeling: Graft-De Rijp 'absordbedBy' Alkmaar
+## Een gemeentelijke herindeling: Graft-De Rijp 'absordbedBy' Alkmaar
 
 Op 1 januari 2015 is de gemeente Graft-De Rijp opgegaan in de gemeente Alkmaar. Deze gemeentelijke herindeling is blijkbaar nog niet verwerkt in alle de door ErfGeo gebruikte datasets. Maar we kunnen zelf een PiT aanmaken die deze gemeentelijke herindeling beschrijft.
 

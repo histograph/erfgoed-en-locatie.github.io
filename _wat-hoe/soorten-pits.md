@@ -7,7 +7,7 @@ priority: 10
 De ene Plaats in Tijd (Place in Time) is de andere niet en het is van belang om verschillende ordes van grootte (of voorkomen in de tijd) van andere te kunnen onderscheiden. 
 Om dat goed te kunnen doen zijn verschillende soorten PiTs gedefiniëerd. Op dit moment (juni 2015) zijn dat de volgende
 
-##De soorten op een rij
+## De soorten op een rij
 
 - hg:Address
 - hg:Monument
@@ -32,27 +32,27 @@ Om dat goed te kunnen doen zijn verschillende soorten PiTs gedefiniëerd. Op dit
 
 Voor de meest up to date versie van alle types; zie het <a href="https://raw.githubusercontent.com/histograph/schemas/master/json/pits.schema.json" title="pits.schema.json op github">pits schema</a> op github.
 
-##Zoeken op type
+## Zoeken op type
 Naar al deze types kan ook specifiek gezocht worden:
 
-###Zoek naar de gemeente "Woerden"
+### Zoek naar de gemeente "Woerden"
 
 - <a href="http://erfgeo.nl/thesaurus/#search=woerden%20type=hg:Municipality">erfgeo.nl/thesaurus/#search=woerden type=hg:Municipality</a>
 
-###Zoek naar plaatsen die "Woerden" in hun naam hebben
+### Zoek naar plaatsen die "Woerden" in hun naam hebben
 
 - <a href="http://erfgeo.nl/thesaurus/#search=woerden%20type=hg:Place">erfgeo.nl/thesaurus/#search=woerden type=hg:Place</a>
 
-###Zoek naar straten die "Woerden" bevatten
+### Zoek naar straten die "Woerden" bevatten
 
 - <a href="http://erfgeo.nl/thesaurus/#search=woerden%20type=hg:Street">erfgeo.nl/thesaurus/#search=woerden type=hg:Street</a>
 
 Ook hele andere dingen zijn mogelijk:
 
-###Laat alle provincies zien
+### Laat alle provincies zien
 - <a href="http://erfgeo.nl/thesaurus/#search=*%20type=hg:Province">erfgeo.nl/thesaurus/#search=*%20type=hg:Province</a>
 
-##Hierarchische relatie tussen PiTs
+## Hierarchische relatie tussen PiTs
 
 Op dit moment kan elke type PiT een relatie hebben met een ander type PiT. Dit zal echter niet altijd blijven kunnen en het team is bezig om restricties aan te brengen aan de relaties die gelegd kunnen worden. 
 Het komt voor dat sommige typen PiTs slechts een beperkte periode in een bepaalde relatie met andere typen PiTs, staan. Bijvoorbeeld de volgende:

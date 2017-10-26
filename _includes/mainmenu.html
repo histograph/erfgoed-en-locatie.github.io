@@ -1,0 +1,4 @@
+<nav id="mainmenu">{% for item in site.data.menu %}
+{% assign url = page.url | replace_first:'/','' | split:"/" | first %}
+<a class="menu-item {% if item.name == url %} current{% endif %}" href="{{ site.baseurl }}/{{ item.name }}">{{item.title}}</a>
+{% endfor %}</nav>

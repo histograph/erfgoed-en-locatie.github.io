@@ -1,12 +1,10 @@
 <meta charset="utf-8">
-<title>erfgeo</title>
-<meta name="description" content="Histograph - historical geocoder">
+<title>ErfGeo |{% if page.title %} {{page.title }} {% else %} {{site.data.style.slogan }} {% endif %}</title>
+{% if page.description %}<meta name="description" content="{{page.description}}">{% endif %}
 <meta name="author" content="Waag Society">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<link rel="icon" type="image/png" href="images/histograph.png">
+<link rel="icon" type="image/png" href="/assets/images/erfgeo.png">
 {{ if page.d3 }}
-<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script src="/assets/js/d3.v3.min.js"></script>
 {{ endif }}
-<link rel="stylesheet" href="{{ site.baseurl }}/css/normalize.css">
-<link rel="stylesheet" href="{{ site.baseurl }}/css/skeleton.css">
-<link rel="stylesheet" href="{{ site.baseurl }}/css/style.css">
+<link rel="stylesheet" href="/assets/css/style.css">

@@ -1,49 +1,27 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-  {% include head.html %}
+{% include head.html %}
 </head>
 <body>
 
   <div class="table-container">
-
     <div class="table-block footer-push">
-
-      {% if !page.altHeader %}
-        {% include alternateHeader.html %}
-      {% else %}
-        {% include header.html %}
-      {% endif %}
+      {% include header-home.html %}
 
       <div class="container">
-
         <div class="row">
-
           <div class="two-third column">
-
             {{ page.title }}
             {{ content }}
-          
           </div>
-        
         </div>
-      
       </div>
-    
+
     </div>
 
     <div class="table-block">
-         
-      
-
-        <footer id="footer" class="twelve columns">
-          <div class="container">
-            {% include footer.html %}
-
-          </div>
-        </footer>
-
-
+      {% include footer.html %}
     </div>
 
   </div>

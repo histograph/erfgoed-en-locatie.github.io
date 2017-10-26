@@ -1,0 +1,21 @@
+// Leaflet overrides
+
+.leaflet-control-layers-toggle {
+  background-image: url(/assets/images/leaflet/layers.png) !important;
+}
+
+.leaflet-bar,
+.leaflet-bar a,
+.leaflet-control-layers,
+.leaflet-control-search,
+.leaflet-control-search .search-button {
+  border-radius: 0 !important;
+}
+
+.leaflet-bar {
+  box-shadow: 0 1px 5px rgba(0,0,0,0.3) !important;
+}
+
+.leaflet-container a:hover {
+  border-bottom-color: transparent;
+}

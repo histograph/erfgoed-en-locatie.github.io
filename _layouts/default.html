@@ -4,51 +4,26 @@
   {% include head.html %}
 </head>
 <body>
-
   <div class="table-container">
 
     <div class="table-block footer-push">
-
-      {% if !page.altHeader %}
-        {% include alternateHeader.html %}
-      {% else %}
-        {% include header.html %}
-      {% endif %}
+      {% include header.html %}
 
       <div class="container">
-
-        <div class="row">
-
-          <div class="nine columns" id="content">
-            <h1>{{ page.title }}</h1>
-            {{ content }}
-            {% if page.post_author %}
-              <em>door: {{ page.post_author }}</em>
-            {% endif %}
-            
-          </div>
-        
+        <div id="content" class="content-block">
+          <h1>{{ page.title }}</h1>
+          {% if page.post_author %}
+            <div class="author">door: {{ page.post_author }}</div>
+          {% endif %}
+          {{ content }}
         </div>
-      
       </div>
-    
     </div>
 
     <div class="table-block">
-         
-      
-
-        <footer id="footer" class="twelve columns">
-          <div class="container">
-            {% include footer.html %}
-
-          </div>
-        </footer>
-
-
+      {% include footer.html %}
     </div>
 
   </div>
-
 </body>
 </html>

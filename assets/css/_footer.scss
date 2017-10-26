@@ -1,0 +1,21 @@
+.footer-push {
+  height: auto;
+}
+
+#footer {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size:12px;
+  text-align: center;
+
+  a {
+    display: inline-block;
+    margin: 0 0.5em;
+    text-transform: uppercase;
+    color: $font-color;
+
+    &:hover {
+      border-bottom-color: $font-color;
+    }
+  }
+}

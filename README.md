@@ -2,7 +2,7 @@
 
 See [histograph.github.io](http://histograph.github.io) for more information.
 
-###how to run:
+## how to run:
 ```jekyll serve```
 or if that fails because of kramdown
 ```bundle exec jekyll serve --watch```
