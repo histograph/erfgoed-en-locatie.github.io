@@ -51,7 +51,7 @@
 
         <div id="search">
           <? if($this->router->fetch_method() != "index" || $this->router->fetch_class() != "start"){ ?>
-          <form action="<?= $this->config->item('base_url') ?>" onsubmit="toViewer(); return false;">
+          <form class="row-flex" action="<?= $this->config->item('base_url') ?>" onsubmit="toViewer(); return false;">
             <input value="" type="text" class="form-control" name="q" id="q" /> <button>zoek</button>
           </form>
 

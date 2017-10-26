@@ -381,6 +381,11 @@ optgroup {
   justify-content: space-between;
 }
 
+.row,
+.content-block {
+  clear: both;
+}
+
 #content {
   max-width: 800px;
   margin: 5em auto 1em auto;
@@ -777,6 +782,8 @@ input[type="url"],
 input[type="password"],
 textarea,
 select {
+  width: 100%;
+  min-width: 240px;
   height: 38px;
   margin-bottom: 1rem;
   padding: 0.5em 0.75em;
@@ -784,6 +791,19 @@ select {
   border: none;
   border-bottom: 2px solid #eee;
   box-shadow: none;
+}
+
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="search"]:focus,
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+textarea:focus,
+select:focus {
+  border-bottom: 2px solid #115577;
+  outline: 0;
 }
 
 /* Removes awkward default styles on some inputs for iOS */
@@ -806,17 +826,11 @@ textarea {
   padding-bottom: 0.5em;
 }
 
-input[type="email"]:focus,
-input[type="number"]:focus,
-input[type="search"]:focus,
-input[type="text"]:focus,
-input[type="tel"]:focus,
-input[type="url"]:focus,
-input[type="password"]:focus,
-textarea:focus,
-select:focus {
-  border-bottom: 2px solid #115577;
-  outline: 0;
+input[readonly] {
+  background-color: whitesmoke;
+  border-bottom: none !important;
+  font-size: 0.8em;
+  height: auto;
 }
 
 label,
@@ -894,14 +908,11 @@ table th:last-child,
 table td:last-child {
   padding-right: 0;
 }
-table tr:last-child th,
-table tr:last-child td {
-  border-bottom: none;
-}
 table th {
   font-size: 0.85em;
   text-transform: uppercase;
   font-weight: 400;
+  padding-top: 1.15em;
 }
 table td.label:after {
   content: ':';
@@ -1350,8 +1361,8 @@ p.examples a:not(:last-child):after {
 }
 
 .CodeMirror {
-  background-color: #F7F7F7 !important;
-  font-size: 0.9em;
+  background-color: whitesmoke !important;
+  font-size: 0.8em;
 }
 
 table.sortable th.asc:before {
@@ -1367,12 +1378,15 @@ table.sortable th.desc:before {
 }
 #results a.result {
   display: block;
-  margin-bottom: 0.8em;
-  padding: 0.5em;
+  margin-bottom: 1.2em;
+  padding: 0.5em 0.75em;
   background-color: whitesmoke;
   border-right: 3px solid whitesmoke;
   border-left: 0 solid transparent;
   color: #000000;
+}
+#results a.result div {
+  padding-left: 1em;
 }
 #results a.result:hover {
   border-left: 3px solid #f54545;
@@ -1382,6 +1396,10 @@ table.sortable th.desc:before {
 
 #content #search {
   float: right;
+}
+
+#content #map {
+  margin-bottom: 2em;
 }
 
 * {

@@ -24,17 +24,11 @@ table {
     }
   }
 
-  tr:last-child { 
-    th,
-    td {
-      border-bottom: none;  
-    }
-  }
-
   th {
     font-size: 0.85em;
     text-transform: uppercase;
     font-weight: 400;
+    padding-top: 1.15em
   }
 
   td {

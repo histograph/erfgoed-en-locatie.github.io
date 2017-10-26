@@ -16,6 +16,11 @@
   justify-content: space-between;
 }
 
+.row,
+.content-block {
+  clear: both;
+}
+
 #content {
   max-width: 800px;
   margin: 5em auto 1em auto;

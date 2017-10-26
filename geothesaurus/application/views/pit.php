@@ -15,7 +15,7 @@ if(isset($pit['uri'])){
 	$pitid = $pit['id'];
 }
 $props["type"] = $pit['type'];
-$props["permalink"] = '<input class="form-control" type="text" value="' . $this->config->item('base_url') . 'pit/?id=' . $pitid . '" />';
+$props["permalink"] = '<input class="form-control" type="text" value="' . $this->config->item('base_url') . 'pit/?id=' . $pitid . '" readonly />';
 if(isset($pit['validSince'])){
 	if(is_array($pit['validSince'])){
 		$pit['validSince'] = "tussen " . implode(" en ", $pit['validSince']);
@@ -37,14 +37,11 @@ if(isset($pit['validUntil'])){
 <div class="content-block">
 
   <div class="row">
-    <div class="col-md-6">
+    <div class="six columns">
 
-      <h3>Onderdeel van hgconcept</h3>
-
-      <p><a href="<?= $this->config->item('base_url') ?>hgconcept/?id=<?= $hgconcept ?>"><?= $this->config->item('base_url') ?>hgconcept/?id=<?= $hgconcept ?></a></p>
+      <p>Onderdeel van hgconcept <a href="<?= $this->config->item('base_url') ?>hgconcept/?id=<?= $hgconcept ?>"><?= $hgconceptname ?></a></p>
 
       <h3>Kenmerken</h3>
-
       <table class="table table-striped">
       <? foreach($props as $fieldname => $prop){ ?>
         <tr>
@@ -53,7 +50,6 @@ if(isset($pit['validUntil'])){
         </tr>
       <? } ?>
       </table>
-
 
       <h3>Additionele data uit bron</h3>
       <? if(isset($pit['data'])){ ?>
@@ -74,7 +70,7 @@ if(isset($pit['validUntil'])){
       <? } ?>
 
       <h3>Uitgaande relaties</h3>
-      <? if(isset($hairs)){ ?>
+      <? if(!empty($hairs)){ ?>
         <table class="table table-striped">
           <? foreach ($hairs as $hair) { ?>
             <tr>
@@ -85,18 +81,16 @@ if(isset($pit['validUntil'])){
             </tr>
           <? } ?>
         </table>
-      <? } ?>
-
+      <? } else { echo 'Geen'; } ?>
 
     </div>
-    <div class="col-md-6">
+    <div class="six columns">
 
       <? if(isset($pit['geometry'])){ ?>
 
         <div style="height:300px; background-color:#eee;" id="map"></div>
 
         <h3>GeoJSON</h3>
-
         <textarea rows="6" class="form-control" id="geojson"></textarea>
 
       <? } ?>

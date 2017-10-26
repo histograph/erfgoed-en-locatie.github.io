@@ -6,8 +6,8 @@
   color: #ccc;
 }
 .CodeMirror {
-  background-color: $color-bg !important;
-  font-size: 0.9em;
+  background-color: $color-box-item !important;
+  font-size: 0.8em;
 }
 
 table.sortable th.asc:before{
@@ -22,12 +22,16 @@ table.sortable th.desc:before{
 
   a.result {
     display: block;
-    margin-bottom: 0.8em;
-    padding: 0.5em;
+    margin-bottom: 1.2em;
+    padding: 0.5em 0.75em;
     background-color: $color-box-item;
     border-right: 3px solid $color-box-item;
     border-left: 0 solid transparent;
     color: $color-text;
+
+    div {
+      padding-left: 1em;
+    }
 
     &:hover {
       border-left: 3px solid $color-link;
@@ -39,4 +43,8 @@ table.sortable th.desc:before{
 
 #content #search {
   float: right;
+}
+
+#content #map {
+  margin-bottom: 2em;  
 }

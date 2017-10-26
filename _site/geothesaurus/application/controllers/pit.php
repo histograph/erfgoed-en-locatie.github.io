@@ -50,11 +50,10 @@ class Pit extends CI_Controller {
 			if($gindex>-1){
 				$data['pit']['geometry'] = $result['features'][0]['geometry']['geometries'][$gindex];
 			}
-			
-			$data['hgconcept'] = hgConceptID($pits);
-			$data['hairs'] = getHairs($data['pit']);
 
-
+      $data['hgconcept'] = hgConceptID($pits);
+      $data['hgconceptname'] = preferredName($pits);
+      $data['hairs'] = getHairs($data['pit']);
 
 			$this->load->view('header');
 			$this->load->view('pit', $data);
@@ -96,7 +95,7 @@ class Pit extends CI_Controller {
 
 		$pits = $result['features'][0]['properties']['pits'];
 		$hgconcept = hgConceptID($pits);
-		
+
 		foreach ($pits as $pit) {
 			if($pit['hgid']==$source . '/' . $data['id']){
 				$data['pit']['properties'] = $pit;
