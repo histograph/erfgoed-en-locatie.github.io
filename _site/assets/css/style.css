@@ -1,0 +1,1614 @@
+@charset "UTF-8";
+/*! normalize.css v3.0.2 | MIT License | git.io/normalize */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/**
+ * 1. Correct `inline-block` display not defined in IE 8/9.
+ * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9/10.
+ * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
+ */
+[hidden],
+template {
+  display: none;
+}
+
+/* Links
+   ========================================================================== */
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+a {
+  background-color: transparent;
+}
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+ */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+ */
+b,
+strong {
+  font-weight: bold;
+}
+
+/**
+ * Address styling not present in Safari and Chrome.
+ */
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari, and Chrome.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove border when inside `a` element in IE 8/9/10.
+ */
+img {
+  border: 0;
+}
+
+/**
+ * Correct overflow not hidden in IE 9/10/11.
+ */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * Address margin not present in IE 8/9 and Safari.
+ */
+figure {
+  margin: 1em 40px;
+}
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+/**
+ * Contain overflow in all browsers.
+ */
+pre {
+  overflow: auto;
+}
+
+/**
+ * Address odd `em`-unit font size rendering in all browsers.
+ */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+/* Forms
+   ========================================================================== */
+/**
+ * Known limitation: by default, Chrome and Safari on OS X allow very limited
+ * styling of `select`, unless a `border` property is set.
+ */
+/**
+ * 1. Correct color not being inherited.
+ *    Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+  margin: 0;
+  /* 3 */
+}
+
+/**
+ * Address `overflow` set to `hidden` in IE 8/9/10/11.
+ */
+button {
+  overflow: visible;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+ * Correct `select` style inheritance in Firefox.
+ */
+button,
+select {
+  text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+input {
+  line-height: normal;
+}
+
+/**
+ * It's recommended that you don't attempt to style these elements.
+ * Firefox's implementation doesn't respect box-sizing, padding, or width.
+ *
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari and Chrome
+ *    (include `-moz` to future-proof).
+ */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box;
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+ * Safari (but not Chrome) clips the cancel button when the search input has
+ * padding (and `textfield` appearance).
+ */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9/10/11.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Remove default vertical scrollbar in IE 8/9/10/11.
+ */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * Don't inherit the `font-weight` (applied by a rule above).
+ * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ */
+optgroup {
+  font-weight: bold;
+}
+
+/*
+* Skeleton V2.0.4
+* Copyright 2014, Dave Gamache
+* www.getskeleton.com
+* Free to use under the MIT license.
+* http://www.opensource.org/licenses/mit-license.php
+* 12/29/2014
+*/
+/* Table of contents
+––––––––––––––––––––––––––––––––––––––––––––––––––
+- Grid
+- Buttons
+- Forms
+- Lists
+- Code
+- Spacing
+- Utilities
+- Clearing
+- Media Queries
+*/
+/* Grid
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.container {
+  position: relative;
+  width: 96%;
+  max-width: 1120px;
+  margin: 40px auto 0;
+}
+
+.column,
+.columns {
+  width: 100%;
+  float: left;
+  box-sizing: border-box;
+}
+
+/* For devices larger than 550px */
+@media (min-width: 550px) {
+  .column,
+  .columns {
+    margin-left: 4%;
+  }
+
+  .column:first-child,
+  .columns:first-child {
+    margin-left: 0;
+  }
+
+  .one.column,
+  .one.columns {
+    width: 4.66666666667%;
+  }
+
+  .two.columns {
+    width: 13.3333333333%;
+  }
+
+  .three.columns {
+    width: 22%;
+  }
+
+  .four.columns {
+    width: 30.6666666667%;
+  }
+
+  .five.columns {
+    width: 39.3333333333%;
+  }
+
+  .six.columns {
+    width: 48%;
+  }
+
+  .seven.columns {
+    width: 56.6666666667%;
+  }
+
+  .eight.columns {
+    width: 65.3333333333%;
+  }
+
+  .nine.columns {
+    width: 74.0%;
+  }
+
+  .ten.columns {
+    width: 82.6666666667%;
+  }
+
+  .eleven.columns {
+    width: 91.3333333333%;
+  }
+
+  .twelve.columns {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .one-third.column {
+    width: 30.6666666667%;
+  }
+
+  .two-thirds.column {
+    width: 65.3333333333%;
+  }
+
+  .one-half.column {
+    width: 48%;
+  }
+
+  /* Offsets */
+  .offset-by-one.column,
+  .offset-by-one.columns {
+    margin-left: 8.66666666667%;
+  }
+
+  .offset-by-two.column,
+  .offset-by-two.columns {
+    margin-left: 17.3333333333%;
+  }
+
+  .offset-by-three.column,
+  .offset-by-three.columns {
+    margin-left: 26%;
+  }
+
+  .offset-by-four.column,
+  .offset-by-four.columns {
+    margin-left: 34.6666666667%;
+  }
+
+  .offset-by-five.column,
+  .offset-by-five.columns {
+    margin-left: 43.3333333333%;
+  }
+
+  .offset-by-six.column,
+  .offset-by-six.columns {
+    margin-left: 52%;
+  }
+
+  .offset-by-seven.column,
+  .offset-by-seven.columns {
+    margin-left: 60.6666666667%;
+  }
+
+  .offset-by-eight.column,
+  .offset-by-eight.columns {
+    margin-left: 69.3333333333%;
+  }
+
+  .offset-by-nine.column,
+  .offset-by-nine.columns {
+    margin-left: 78.0%;
+  }
+
+  .offset-by-ten.column,
+  .offset-by-ten.columns {
+    margin-left: 86.6666666667%;
+  }
+
+  .offset-by-eleven.column,
+  .offset-by-eleven.columns {
+    margin-left: 95.3333333333%;
+  }
+
+  .offset-by-one-third.column,
+  .offset-by-one-third.columns {
+    margin-left: 34.6666666667%;
+  }
+
+  .offset-by-two-thirds.column,
+  .offset-by-two-thirds.columns {
+    margin-left: 69.3333333333%;
+  }
+
+  .offset-by-one-half.column,
+  .offset-by-one-half.columns {
+    margin-left: 52%;
+  }
+}
+/* Buttons
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.button,
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  display: inline-block;
+  height: 38px;
+  padding: 0 30px;
+  color: #555;
+  text-align: center;
+  font-size: 11px;
+  line-height: 38px;
+  letter-spacing: .1rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+  background-color: transparent;
+  border: 1px solid #bbb;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.button:hover,
+button:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+input[type="button"]:hover,
+.button:focus,
+button:focus,
+input[type="submit"]:focus,
+input[type="reset"]:focus,
+input[type="button"]:focus {
+  color: #333;
+  border-color: #888;
+  outline: 0;
+}
+
+.button.button-primary,
+button.button-primary,
+input[type="submit"].button-primary,
+input[type="reset"].button-primary,
+input[type="button"].button-primary {
+  color: #FFF;
+  background-color: #33C3F0;
+  border-color: #33C3F0;
+}
+
+.button.button-primary:hover,
+button.button-primary:hover,
+input[type="submit"].button-primary:hover,
+input[type="reset"].button-primary:hover,
+input[type="button"].button-primary:hover,
+.button.button-primary:focus,
+button.button-primary:focus,
+input[type="submit"].button-primary:focus,
+input[type="reset"].button-primary:focus,
+input[type="button"].button-primary:focus {
+  color: #FFF;
+  background-color: #1EAEDB;
+  border-color: #1EAEDB;
+}
+
+/* Forms
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+textarea,
+select {
+  height: 38px;
+  padding: 6px 10px;
+  /* The 6px vertically centers text on FF, ignored by Webkit */
+  background-color: #fff;
+  border: none;
+  border-bottom: 2px solid #fff;
+  box-shadow: none;
+  box-sizing: border-box;
+}
+
+/* Removes awkward default styles on some inputs for iOS */
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+textarea {
+  min-height: 65px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="search"]:focus,
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+textarea:focus,
+select:focus {
+  border-bottom: 2px solid #1e98b6;
+  outline: 0;
+}
+
+label,
+legend {
+  display: block;
+  margin-bottom: .5rem;
+}
+
+fieldset {
+  padding: 0;
+  border-width: 0;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  display: inline;
+}
+
+label > .label-body {
+  display: inline-block;
+  margin-left: .5rem;
+  font-weight: normal;
+}
+
+/* Lists
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+ul {
+  list-style: circle inside;
+}
+
+ol {
+  list-style: decimal inside;
+}
+
+ol, ul {
+  padding-left: 0;
+  margin-top: 0;
+}
+
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+  margin: 1.5rem 0 1.5rem 3rem;
+  font-size: 90%;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+/* Code
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+code {
+  padding: .2rem .5rem;
+  margin: 0 .2rem;
+  font-size: 80%;
+  white-space: nowrap;
+  background: #F1F1F1;
+  border: 1px solid #E1E1E1;
+  border-radius: 4px;
+}
+
+pre > code {
+  display: block;
+  padding: 1rem 1.5rem;
+  white-space: pre;
+}
+
+/* Spacing
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+button,
+.button {
+  margin-bottom: 1rem;
+}
+
+input,
+textarea,
+select,
+fieldset {
+  margin-bottom: 1.5rem;
+}
+
+pre,
+blockquote,
+dl,
+figure,
+table,
+p,
+ul,
+ol,
+form {
+  margin-bottom: 1.6rem;
+}
+pre:last-child,
+blockquote:last-child,
+dl:last-child,
+figure:last-child,
+table:last-child,
+p:last-child,
+ul:last-child,
+ol:last-child,
+form:last-child {
+  margin-bottom: 0;
+}
+
+/* Utilities
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.u-full-width {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.u-max-full-width {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.u-pull-right {
+  float: right;
+}
+
+.u-pull-left {
+  float: left;
+}
+
+/* Misc
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+hr {
+  margin-top: 3rem;
+  margin-bottom: 3.5rem;
+  border-width: 0;
+  border-top: 1px solid #E1E1E1;
+}
+
+/* Clearing
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* Self Clearing Goodness */
+.container:after,
+.row:after,
+.u-cf {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Media Queries
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/*
+Note: The best way to structure the use of media queries is to create the queries
+near the relevant code. For example, if you wanted to change the styles for buttons
+on small devices, paste the mobile query code up in the buttons section and style it
+there.
+*/
+/* Larger than mobile */
+/* Larger than phablet (also point when grid becomes active) */
+/* Larger than tablet */
+/* Larger than desktop */
+/* Larger than Desktop HD */
+.leaflet-control-layers-toggle {
+  background-image: url(/assets/images/leaflet/layers.png) !important;
+}
+
+.leaflet-bar,
+.leaflet-bar a,
+.leaflet-control-layers,
+.leaflet-control-search,
+.leaflet-control-search .search-button {
+  border-radius: 0 !important;
+}
+
+.leaflet-bar {
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3) !important;
+}
+
+.leaflet-container a:hover {
+  border-bottom-color: transparent;
+}
+
+@font-face {
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/WorkSans-Regular.woff2") format("woff2"), url("../fonts/WorkSans-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/WorkSans-SemiBold.woff2") format("woff2"), url("../fonts/WorkSans-SemiBold.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/WorkSans-Bold.woff2") format("woff2"), url("../fonts/WorkSans-Bold.ttf") format("truetype");
+}
+body,
+input {
+  font-family: "Work Sans", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  color: #000000;
+  font-weight: 400;
+}
+
+p, li, time {
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+h1:last-child, h2:last-child, h3:last-child, h4:last-child, h5:last-child, h6:last-child {
+  margin-bottom: 0;
+}
+
+h1 {
+  font-size: 42px;
+  margin-bottom: 2rem;
+  font-weight: 500;
+  line-height: 1.2em;
+  letter-spacing: -0.035em;
+}
+
+h2 {
+  font-size: 30px;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  line-height: 1.2em;
+  letter-spacing: -0.035em;
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 1.3em;
+  letter-spacing: 0.015em;
+}
+#content h3 {
+  margin-bottom: 4px;
+}
+
+h4 {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.5em;
+}
+
+h5 {
+  font-size: 1em;
+  margin-bottom: 1em;
+  line-height: 1.5em;
+}
+h5 code {
+  font-weight: normal;
+}
+.box h5 code {
+  float: right;
+}
+
+h6 {
+  line-height: 1.5em;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  margin-bottom: 1px;
+  padding-bottom: 5px;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1.6em;
+}
+p:last-child {
+  margin-bottom: 0;
+}
+
+blockquote {
+  color: #666;
+  border-left: 4px solid #E4E4E4;
+  margin-left: 0;
+  padding-left: 20px;
+}
+
+strong, b {
+  font-weight: 700;
+}
+
+::-moz-selection {
+  color: #FFF;
+  background: #136175;
+}
+
+::selection {
+  color: #FFF;
+  background: #136175;
+}
+
+a {
+  color: #f22c5a;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+a:hover {
+  transition: all 150ms ease-in-out;
+  color: #dd0e3e;
+  border-bottom: 1px solid #dd0e3e;
+}
+a:active, a:focus {
+  outline-style: none;
+  -moz-outline-style: none;
+}
+
+ul.links {
+  list-style: none;
+}
+ul.links li {
+  padding-left: 1em;
+  position: relative;
+}
+ul.links li:before {
+  content: "›";
+  position: absolute;
+  left: 0;
+  top: 0.25em;
+  line-height: 1em;
+}
+ul.links li:hover:before {
+  left: 0.1em;
+}
+ul.links a {
+  color: #000000;
+}
+ul.links a:hover {
+  border-bottom-color: #000000;
+}
+
+.buttons {
+  float: right;
+}
+
+button {
+  background-color: white;
+  font-size: 1.5rem;
+  margin-left: 10px;
+  height: 35px;
+  line-height: 35px;
+  padding: 0 13px;
+  font-weight: 400;
+}
+
+button.details {
+  font-weight: bold;
+}
+
+button.button-primary {
+  background-color: #000;
+  border-color: #000;
+  font-size: 16px;
+  height: 38px;
+  line-height: 38px;
+  letter-spacing: 0.15em;
+}
+button.button-primary:hover {
+  background-color: #136175;
+  border-color: #136175;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+table.data {
+  margin: 1.6em 0 3.2em 0;
+}
+table th,
+table td {
+  min-width: 5em;
+  padding: 0.75em;
+  border-bottom: 1px solid #ebebeb;
+  vertical-align: top;
+  text-align: left;
+}
+table th:first-child,
+table td:first-child {
+  padding-left: 0;
+}
+table th:last-child,
+table td:last-child {
+  padding-right: 0;
+}
+table th {
+  font-size: 0.85em;
+  text-transform: uppercase;
+  font-weight: 400;
+  color: #136175;
+}
+table td.label:after {
+  content: ':';
+}
+table td:not(:first-child) a {
+  font-size: 0.85em;
+  word-break: break-all;
+}
+table tr:last-child td {
+  border-bottom: none;
+}
+
+table.no-borders tbody tr:first-child {
+  border-top: 1px solid black;
+}
+table.no-borders tr.border-bottom {
+  border-bottom: 1px solid black;
+}
+table.no-borders td {
+  border-bottom: none;
+}
+
+header {
+  background-color: #99ddee;
+  margin-top: 0;
+}
+header.header-default {
+  position: fixed;
+  width: 100%;
+  height: 38px;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+header .logo span {
+  font-weight: 700;
+}
+header a.logo {
+  margin-left: 1rem;
+  font-size: 24px;
+  line-height: 38px;
+}
+header a.logo:hover {
+  border-bottom-color: transparent;
+}
+header h1.logo {
+  font-weight: 400;
+  font-size: 72px;
+}
+header a {
+  text-decoration: none;
+  color: #000;
+}
+header a:hover, header a.current {
+  color: #000000;
+  text-decoration: none;
+  border-bottom: 1px solid #000000;
+}
+header ul {
+  margin: 2px 0 0;
+  padding: 0;
+  list-style-type: none;
+  float: right;
+}
+header ul li {
+  display: inline;
+  margin-left: 7px;
+}
+
+#mainmenu {
+  float: right;
+}
+#mainmenu a.menu-item {
+  margin-right: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-size: 0.85em;
+  line-height: 38px;
+}
+
+#mission {
+  padding-bottom: 30px;
+}
+#mission h1 {
+  margin-bottom: 0px;
+}
+#mission h2 {
+  font-size: 30px;
+  max-width: 340px;
+  margin-bottom: 6px;
+  font-weight: 400;
+}
+#mission p {
+  font-size: 20px;
+  margin-bottom: 16px;
+  margin-top: 16px;
+}
+
+#searchbox {
+  color: #000;
+  margin-bottom: 2.5rem;
+}
+#searchbox input,
+#searchbox button {
+  margin-bottom: 4px;
+}
+
+.footer-push {
+  height: auto;
+}
+
+#footer {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 12px;
+  text-align: center;
+}
+#footer a {
+  display: inline-block;
+  margin: 0 0.5em;
+  text-transform: uppercase;
+  color: #000000;
+}
+#footer a:hover {
+  border-bottom-color: #000000;
+}
+
+#app .container {
+  margin-top: 20px;
+}
+
+#map.map-full {
+  position: absolute;
+  width: 100%;
+  top: 38px;
+  bottom: 0;
+}
+
+#map-legend {
+  position: fixed;
+  padding: 1rem;
+  width: 390px;
+  max-width: 60vw;
+  height: auto;
+  bottom: 10px;
+  left: 10px;
+  z-index: 99999;
+}
+
+#sidebar-container {
+  left: 0;
+  width: 450px;
+}
+
+#graph-container {
+  left: 450px;
+  right: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+}
+
+#graph-box {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+#graph {
+  width: 100%;
+  height: 100%;
+  z-index: 1001;
+}
+#graph path {
+  fill: none;
+  stroke: #aaa;
+  stroke-width: 1.5px;
+  marker-end: url(#marker-arrow);
+}
+#graph #licensing {
+  fill: green;
+}
+#graph .link.licensing {
+  stroke: green;
+}
+#graph .link.resolved {
+  stroke-dasharray: 0,2 1;
+}
+
+#search-box {
+  margin-bottom: 10px;
+}
+#search-box input {
+  margin: 0;
+}
+
+.geometry-type {
+  width: 25px;
+  height: 25px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 0.8;
+}
+
+.geometry-type-point {
+  background-image: url(../images/geometry-types_point.svg);
+}
+
+.geometry-type-line {
+  background-image: url(../images/geometry-types_line.svg);
+}
+
+.geometry-type-polygon {
+  background-image: url(../images/geometry-types_polygon.svg);
+}
+
+.place-name,
+.concept-alt-name {
+  font-style: italic;
+}
+
+.place-name:before,
+.concept-alt-name:before {
+  content: '“';
+}
+
+.place-name:after {
+  content: "”";
+}
+
+.concept-alt-name:after {
+  content: "”, ";
+}
+
+.concept-alt-name:last-child:after {
+  content: "” ";
+}
+
+.geometry-type-list span *.filtered,
+.dataset-list span *.filtered {
+  opacity: 0.5;
+}
+
+.type-header {
+  float: right;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.list {
+  list-style-type: none;
+  margin-bottom: 0;
+  margin-left: 0;
+}
+.list li {
+  margin-bottom: 0;
+  clear: both;
+  cursor: pointer;
+  padding-top: 0.8em;
+  padding-bottom: 0.2em;
+}
+.list li.pit:not(:last-child) {
+  margin-bottom: 0;
+}
+
+#concepts .concept {
+  margin: 0.8em;
+  background-color: whitesmoke;
+  border-left: 3px solid whitesmoke;
+}
+#concepts .concept.highlighted {
+  border-left-color: #f22c5a;
+}
+#concepts .concept table {
+  font-size: 14px;
+  margin-bottom: 0;
+}
+#concepts .concept table td:first-child {
+  width: 70px;
+}
+#concepts .concept .dataset-list span {
+  display: inline-block;
+  margin-right: 0.5em;
+  padding: 0 0.5em;
+  font-size: 12px;
+  background-color: #ebebeb;
+  border-radius: 0.25em;
+}
+#concepts .concept a.show-details {
+  display: inline-block;
+  position: relative;
+  margin-right: 1em;
+  padding-right: 0.25em;
+  text-transform: uppercase;
+  font-size: 11px;
+}
+#concepts .concept a.show-details:after {
+  position: absolute;
+  content: "→";
+  top: 0;
+  right: -1em;
+}
+#concepts .concept a.show-details:hover {
+  border-bottom-color: transparent;
+}
+#concepts .concept a.show-details:hover:after {
+  right: -1.1em;
+}
+
+#concepts-close,
+.show-details {
+  float: right;
+  margin-left: 1em;
+}
+
+#concepts-close {
+  color: #000000;
+}
+#concepts-close:hover {
+  color: #f22c5a;
+  border-bottom: none;
+}
+
+#pit-name-filter {
+  height: 3rem;
+  margin-top: -2px;
+  padding: 6px 10px;
+  width: 100%;
+  margin-bottom: 0;
+}
+
+.geometry-type-list span:not(:last-child):after,
+.sort-fields span:not(:last-child):after {
+  content: ", ";
+}
+
+.sort-fields span a.selected {
+  font-weight: bold;
+}
+
+#loop-pits img {
+  position: relative;
+  top: 4px;
+}
+
+.graph-hgid {
+  font-family: monospace;
+}
+
+#marker-arrow path {
+  fill: #aaa;
+}
+
+.graph-pit {
+  fill: white;
+  stroke: #333;
+  stroke-width: 1.5px;
+}
+
+text {
+  font-size: 15px;
+  pointer-events: none;
+  text-shadow: 0 1px 0 #fff, 1px 0 0 #fff, 0 -1px 0 #fff, -1px 0 0 #fff;
+}
+
+#options-container {
+  left: 450px;
+  width: 450px;
+}
+
+.box-container {
+  position: absolute;
+  top: 38px;
+  bottom: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.box-container-padding {
+  top: 10px;
+  left: 10px;
+  bottom: 10px;
+  right: 10px;
+  position: absolute;
+}
+
+.box {
+  pointer-events: all;
+  background-color: #ffffff;
+  box-shadow: 0px 1px 5px rgba(50, 50, 50, 0.34);
+}
+.box ul:last-child,
+.box p:last-child {
+  margin-bottom: 0;
+}
+
+.list-box {
+  width: 100%;
+  max-height: calc(100% - 72px);
+  overflow-y: auto;
+}
+
+td.links span:not(:last-child):after {
+  content: ',\00a0';
+  text-decoration: none;
+  cursor: default;
+  display: inline-block;
+}
+
+p.examples {
+  font-size: 0.8em;
+}
+p.examples a {
+  display: inline-block;
+  position: relative;
+  margin-right: 0.5em;
+  line-height: 1em;
+}
+p.examples a:not(:last-child):after {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  content: ',\00a0';
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f7f7f7;
+}
+
+.table-container {
+  display: table;
+  height: 100%;
+  width: 100%;
+}
+
+.table-block {
+  display: table-row;
+  height: 1px;
+}
+
+#content {
+  max-width: 800px;
+  margin: 5em auto 1em auto;
+}
+#content.wide {
+  max-width: none;
+}
+
+.row-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.right,
+.float-right {
+  float: right;
+}
+
+.clear {
+  clear: both;
+}
+
+.hidden {
+  display: none;
+}
+
+.indent {
+  margin-left: 1em;
+}
+
+.padding {
+  padding: .8em;
+}
+
+.side-padding {
+  padding: 0 .8em;
+}
+
+.cell-padding {
+  padding-top: 6px;
+}
+
+.id {
+  font-family: monospace;
+  font-size: 1.5rem;
+}
+
+time.published {
+  float: right;
+  margin: 0 0 1em 2em;
+  padding: 0 0.5em;
+  font-size: 14px;
+  background-color: #f2f2f2;
+  border-radius: 0.25em;
+}
+
+.author {
+  margin-bottom: 3rem;
+  text-transform: uppercase;
+  font-size: 13px;
+}
+h1 + .author {
+  margin-top: -1rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.content-block {
+  background-color: #fff;
+  margin-bottom: 3rem;
+  padding: 1.5rem;
+  box-shadow: 0px 1px 5px rgba(50, 50, 50, 0.14);
+}
+.list .content-block {
+  margin-bottom: 1.5rem;
+}
+
+.pvf-icon {
+  width: 16px;
+}
+
+.light {
+  color: #ccc;
+}
+
+.CodeMirror {
+  background-color: #f7f7f7 !important;
+  font-size: 0.9em;
+}
+
+table.sortable th.asc:before {
+  content: '\25b4';
+}
+
+table.sortable th.desc:before {
+  content: '\25be';
+}
+
+#results {
+  margin-top: 2rem;
+}
+#results a.result {
+  display: block;
+  margin-bottom: 0.8em;
+  padding: 0.5em;
+  background-color: whitesmoke;
+  border-right: 3px solid whitesmoke;
+  border-left: 0 solid transparent;
+  color: #000000;
+}
+#results a.result:hover {
+  border-left: 3px solid #f22c5a;
+  border-right: 0 solid transparent;
+  border-bottom-color: transparent;
+}
+
+#content #search {
+  float: right;
+}

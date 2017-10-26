@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<title>ErfGeo | Nederlandse topografie door de tijd (beta) </title>
+<meta name="description" content="ErfGeo. Nederlandse topografie door de tijd (beta)">
+<meta name="author" content="Waag Society">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link rel="icon" type="image/png" href="/assets/images/erfgeo.png">
+
+<script src="/assets/js/d3.v3.min.js"></script>
+
+<link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+
+  <div class="table-container">
+    <div class="table-block footer-push">
+      <header class="header-home">
+  <div class="row">
+    <nav id="mainmenu">
+
+<a class="menu-item " href="/thesaurus">Thesaurus</a>
+
+
+<a class="menu-item " href="/nieuws">Blog</a>
+
+
+<a class="menu-item " href="/wat-hoe">Wat? Hoe?</a>
+
+
+<a class="menu-item " href="/tools">Tools</a>
+</nav>
+  </div>
+
+  <div class="container">
+    <div class="row" id="mission">
+      <div class="five columns">
+        <h1 class="logo"><span>Erf</span>Geo</h1>
+        <h2>Nederlandse topografie door de tijd (beta)</h2>
+      </div>
+      <div class="seven columns">
+        <p>Van Dorestad tot Lelystad, van Pieterskerk tot Nils&nbsp;Bohrweg&nbsp;1, van Burgwal tot Bob Marleystraat en van Oude&nbsp;Niedorp tot Hollands Kroon.</p>
+        <p>Elke plaats, bestuurlijke eenheid, straat, zelfs elk gebouw en elk adres dat ooit in Nederland bestaan heeft kennen - dat is onze ambitie.</p>
+      </div>
+    </div>
+    <div id="searchbox">
+      <div class="row-flex">
+        <input type="text" class="u-full-width" id="searchstring" placeholder="plaatsnaam, straatnaam, etc." data-keyuphandler="thesaurusSearch"/>
+        <button class="button-primary" onclick="search();">Zoek</button>
+      </div>
+      <small>Bijvoorbeeld:
+          <a href="/thesaurus/#search=%22Heyloe%22">Heyloe</a>, 
+          <a href="/thesaurus/#search=%22Nieuwer Amstel%22">Nieuwer Amstel</a>, 
+          <a href="/thesaurus/#search=%22Worcum%22">Worcum</a>, 
+          <a href="/thesaurus/#search=%22Volksvlijt%22">Volksvlijt</a>, 
+          <a href="/thesaurus/#search=%22Morocco%22">Morocco</a>, 
+          <a href="/thesaurus/#search=%22Stalinlaan%22">Stalinlaan</a>, 
+          <a href="/thesaurus/#search=%22Monster%22">Monster</a>, 
+          <a href="/thesaurus/#search=%22Dorestad%22">Dorestad</a>
+      </small>
+    </div>
+  </div>
+
+</header>
+
+
+      <div class="container">
+        <div class="row">
+          <div class="two-third column">
+            
+            <div class="row-flex">
+
+	<div class="six columns content-block">
+		<h3><a href="/thesaurus">Thesaurus</a></h3>
+		<ul class="links">
+		<li><a href="/thesaurus">Zoek via de viewer</a></li>
+		<li><a href="/geothesaurus">Tekstueel zoeken in de geothesaurus</a></li>
+		<li><a href="/geothesaurus/bronnen">Overzicht gebruikte datasets</a></li>
+		</ul>
+	</div>
+
+	<div class="six columns content-block">
+		<h3><a href="/wat-hoe/index.html">Wat? Hoe?</a></h3>
+		<ul class="links">
+		
+		
+		  <li><a href="/wat-hoe/watvoordata.html">Wat voor data vind je in ErfGeo?</a></li>
+		
+		  <li><a href="/wat-hoe/pits-concepten-relaties.html">PiTs, HgConcepten en Relaties</a></li>
+		
+		<li><a href="/wat-hoe/">Meer...</a></li>
+		</ul>
+	</div>
+
+</div>
+
+<div class="row-flex">
+
+	<div class="six columns content-block">
+		<h3><a href="/nieuws/index.html">Blog</a></h3>
+		<ul class="links">
+		
+		
+		  <li><a href="/nieuws/dataclinics-augustus.html">Dataclinics inspiratie voor praktische toepassingen geocoder</a></li>
+		
+		  <li><a href="/nieuws/hacking-heritage-talk.html">Hacking Heritage Talk 17 September</a></li>
+		
+		</ul>
+	</div>
+
+	<div class="six columns content-block">
+		<h3><a href="/tools/index.html">Tools</a></h3>
+		<ul class="links">
+		
+		
+		  
+		  	<li><a href="/tools/api.html">ErfGeo API</a></li>
+		  
+		
+		  
+		  	<li><a href="/tools/histodraw.html">Histodraw</a></li>
+		  
+		
+		  
+		  	<li><a href="/tools/standaardiseren.html">Plaatsnamen standaardiseren</a></li>
+		  
+		
+		</ul>
+	</div>
+
+</div>
+
+<script type="text/javascript">
+	var keyHandlerMap = {
+			thesaurusSearch: thesaurusSearchKeyUp
+		};
+
+	function genericKeyHandler(e){
+		var target = e.target || e.srcElement,
+			handlerName = target.dataset.keyuphandler,
+			handler = keyHandlerMap[handlerName];
+
+		if(handler){
+			handler.call(target, e);
+		}
+	}
+
+	function thesaurusSearchKeyUp(e){
+		var enterCode = 13;
+
+		if(e.keyCode === enterCode){
+			search();
+			//location.href = '/thesaurus/#search=' + this.value
+		}
+	}
+
+	document.addEventListener('keyup', genericKeyHandler);
+
+	function search(){
+		var searchstring = document.getElementById('searchstring').value;
+		location.href = '/thesaurus/#search=' + searchstring;
+	}
+</script>
+
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="table-block">
+      <footer id="footer">
+  <div class="container">
+    <a href="/over-ons#contact">contact</a> | <a href="/over-ons">over ons</a>
+  </div>
+</footer>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-63876258-1', 'auto');
+  ga('send', 'pageview');
+</script>
+<!-- Piwik -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  _paq.push(["setDomains", ["*.erfgeo.nl"]]);
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//stats.waag.org/";
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['setSiteId', '12']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<noscript><p><img src="//stats.waag.org/piwik.php?idsite=12" style="border:0;" alt="" /></p></noscript>
+<!-- End Piwik Code -->
+    </div>
+
+  </div>
+
+</body>
+</html>

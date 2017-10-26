@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+<title>ErfGeo | PiTs, HgConcepten en Relaties </title>
+
+<meta name="author" content="Waag Society">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link rel="icon" type="image/png" href="/assets/images/erfgeo.png">
+
+<script src="/assets/js/d3.v3.min.js"></script>
+
+<link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+  <div class="table-container">
+
+    <div class="table-block footer-push">
+      <header class="header-default">
+  <a href="/" class="logo">
+    <span>Erf</span>Geo</a>
+  </a>
+  <nav id="mainmenu">
+
+<a class="menu-item " href="/thesaurus">Thesaurus</a>
+
+
+<a class="menu-item " href="/nieuws">Blog</a>
+
+
+<a class="menu-item  current" href="/wat-hoe">Wat? Hoe?</a>
+
+
+<a class="menu-item " href="/tools">Tools</a>
+</nav>
+</header>
+
+
+      <div class="container">
+        <div id="content" class="content-block">
+          <h1>PiTs, HgConcepten en Relaties</h1>
+          
+            <div class="author">door: Menno den Engelse</div>
+          
+          <p>ErfGeo bevat data uit vele bronnen. Elk van die bronnen kan informatie bevatten over een bepaalde straat, plaats, etc. Zo’n beschrijving van één zo’n plaats of straat in één dataset noemen we een PiT.</p>
+
+<h2 id="plaats-in-tijd-pit">Plaats in Tijd (PiT)</h2>
+
+<p>Een Plaats in Tijd, of Place in Time zo u wilt, beschrijft dus een straat, plaats, adres, gebouw, departement, etc. Elke PiT heeft in ieder geval een <code class="highlighter-rouge">type</code> waarin vermeld wordt waarmee we van doen hebben, een <code class="highlighter-rouge">id</code> (dat kan ook een uri zijn), een <code class="highlighter-rouge">name</code>, wellicht een <code class="highlighter-rouge">geometry</code> en waarschijnlijk ook een periode (<code class="highlighter-rouge">validSince</code> en <code class="highlighter-rouge">validUntil</code>).</p>
+
+<p>Meer dan bronnen met PiTs zit er niet in ErfGeo. Vaak zijn er meerdere PiTs die dezelfde plaats beschrijven. Een plaats als <a href="http://thesaurus.erfgeo.nl/hgconcept/?id=http://vocab.getty.edu/tgn/7006952">Amsterdam</a> wordt door tientallen PiTs beschreven.</p>
+
+<h2 id="relaties">Relaties</h2>
+
+<p>Tussen PiTs kunnen relaties worden gelegd. Zo kan je bijvoorbeeld zeggen dat de ene PiT hetzelfde concept beschrijft als een andere PiT, of dat de ene PiT in een andere ligt, of dat de ene PiT is opgegaan in de andere - bijvoorbeeld bij een gemeentelijke herindeling.</p>
+
+<h2 id="hgconcepten">HgConcepten</h2>
+
+<p>PiTs waarvan is aangegeven dat ze over dezelfde plaats gaan, met andere woorden PiTs die aan elkaar verbonden zijn met <code class="highlighter-rouge">hg:sameHgConcept</code> relaties, vormen samen een HgConcept. Die tweede relatie geeft aan dat de ene PiT een naam bevat die - bijvoorbeeld gedurende een bepaalde periode - werd of wordt gebruikt voor een PiT die een fysieke plaats beschrijft.</p>
+
+<p><img src="/assets/images/klont.png" alt="Het HgConcept Heiloo" /></p>
+
+<p>Zo’n HgConcept is dus een dynamisch iets: er kunnen altijd nieuwe PiTs toegevoegd worden aan ErfGeo die een bestaand HgConcept beschrijven. Ook kan het best dat verschillende PiTs binnen één HgConcept elkaar tegenspreken. De ene zegt bijvoorbeeld dat de straat in 1900 is aangelegd, de andere noemt 1910 als begindatum.</p>
+
+<p>Ook kan het voorkomen dat PiTs niet verbonden zijn terwijl dat eigenlijk wel zou moeten. Dan krijg je bijvoorbeeld twee Alkmaars terwijl er daar, binnen Nederland, toch maar één van is. Als we zo’n geval ontdekken, is het een kwestie van de juiste relatie leggen, om ze weer samen in een HgConcept te krijgen.</p>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="table-block">
+      <footer id="footer">
+  <div class="container">
+    <a href="/over-ons#contact">contact</a> | <a href="/over-ons">over ons</a>
+  </div>
+</footer>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-63876258-1', 'auto');
+  ga('send', 'pageview');
+</script>
+<!-- Piwik -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  _paq.push(["setDomains", ["*.erfgeo.nl"]]);
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//stats.waag.org/";
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['setSiteId', '12']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<noscript><p><img src="//stats.waag.org/piwik.php?idsite=12" style="border:0;" alt="" /></p></noscript>
+<!-- End Piwik Code -->
+    </div>
+
+  </div>
+</body>
+</html>

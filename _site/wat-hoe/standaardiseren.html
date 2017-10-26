@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+<title>ErfGeo | Standaardiseren </title>
+
+<meta name="author" content="Waag Society">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link rel="icon" type="image/png" href="/assets/images/erfgeo.png">
+
+<script src="/assets/js/d3.v3.min.js"></script>
+
+<link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+  <div class="table-container">
+
+    <div class="table-block footer-push">
+      <header class="header-default">
+  <a href="/" class="logo">
+    <span>Erf</span>Geo</a>
+  </a>
+  <nav id="mainmenu">
+
+<a class="menu-item " href="/thesaurus">Thesaurus</a>
+
+
+<a class="menu-item " href="/nieuws">Blog</a>
+
+
+<a class="menu-item  current" href="/wat-hoe">Wat? Hoe?</a>
+
+
+<a class="menu-item " href="/tools">Tools</a>
+</nav>
+</header>
+
+
+      <div class="container">
+        <div id="content" class="content-block">
+          <h1>Standaardiseren</h1>
+          
+            <div class="author">door: Menno den Engelse</div>
+          
+          <p>Er zijn drie goede redenen om topografische elementen te standaardiseren.</p>
+
+<h2 id="eenduidigheid">Eenduidigheid</h2>
+
+<p>De eerste reden is een simpele: als je een gegeven plaatsaanduiding later nog eens tegenkomt wil je graag snappen om welke plaats het gaat. <code class="highlighter-rouge">Bergen</code>? Is dat het Noord-Hollandse of het Limburgse Bergen? Of misschien het Noorse Bergen of het Waalse Mons? Ook is Bergen wel eens gebruikt zonder de precisering ‘op Zoom’.</p>
+
+<p>Dit is op te lossen door <code class="highlighter-rouge">Bergen, Noord-Holland</code> te noteren. Al zou je dan eigenlijk ook aan moeten geven of het de plaats of de gemeente betreft, dat zijn immers twee verschillende entiteiten met verschillende eigenschappen. <code class="highlighter-rouge">Bergen, Noord-Holland, plaats</code> zou dus beter zijn.</p>
+
+<p>Maar als je data uit verschillende bronnen met elkaar wil verbinden, dan loop je met die strategie al snel tegen een probleem. De kans is namelijk groot dat, hoe netjes je ook van je taak gekweten hebt, er in de ene bron <code class="highlighter-rouge">Gemeente Bergen, Noord-Holland</code> en in de andere <code class="highlighter-rouge">Gem. Bergen NH</code> staat, of <code class="highlighter-rouge">Bergen N.H., gemeente</code>. Als één van de bronnen door iemand anders wordt aangeleverd, is die kans natuurlijk nog veel groter.</p>
+
+<p>Hoewel dit voor een mens geen probleem is, laat je bestanden met duizenden records waarschijnlijk liever door één of ander programmaatje aan elkaar koppelen. Als je handig bent kan je natuurlijk zelf wat code schrijven 
+die <code class="highlighter-rouge">NH</code> en <code class="highlighter-rouge">N.H.</code> omzet naar <code class="highlighter-rouge">Noord-Holland</code>. Maar dit kost tijd, er blijven altijd wat gevallen over die handmatig na moet lopen en het zal de eerste keer niet zijn dat je de stad <code class="highlighter-rouge">Groningen</code> voor de provincie aanziet - of andersom.</p>
+
+<h2 id="verbinden-met-andere-data">Verbinden met andere data</h2>
+
+<p>De tweede reden is dus ‘verbindbaarheid’. Als je nou een algemeen gebruikte identificatiecode zou kunnen gebruiken, dan heb je van al die verschillende schrijfwijzes geen last meer. Geografische thesauri als TGN en GeoNames leveren dergelijke identificatiecodes. De GeoNames code voor de Noord-Hollandse plaats Bergen is <code class="highlighter-rouge">2759154</code>. Voor de gemeente Bergen heeft GeoNames een andere code, dat is <code class="highlighter-rouge">2759151</code>.</p>
+
+<p>Als mens is het wel even slikken als je <code class="highlighter-rouge">2759154</code> ziet staan. Daarom zou ik altijd twee velden aanmaken: één met de machineleesbare code, en één met een voor mensen begrijpelijk label dat daarbij hoort. Je hoeft je bij dat label dan natuurlijk niet meer druk te maken over de juiste schrijfwijze - <code class="highlighter-rouge">Den Haag, ZH</code>, <code class="highlighter-rouge">'s Gravenhage</code> en <code class="highlighter-rouge">The Hague</code> mogen allemaal.</p>
+
+<h2 id="verrijking">Verrijking</h2>
+
+<p>De derde reden om te standaardiseren is verrijking. Stel dat je identificatiecode verwijst naar een plek waar meer informatie over de plaats in kwestie is te vinden. Bij GeoNames weten ze bijvoorbeeld van alles over Bergen, NH. Dat het in een gemeente met dezelfde naam ligt, bijvoorbeeld. Maar ook dat het op coördinaat <code class="highlighter-rouge">52.66917, 4.70417</code> ligt en dat de Russische naam ‘Берген’ is.</p>
+
+<p>Als je nou in plaats van de identificatiecode een URI gebruikt, dan kunnen zowel mens als machine die link volgen om bij die informatie te komen. URI staat voor ‘Uniform Resource Identifier’ en is niets anders dan een URL die gebruikt wordt om iets te identificeren. De GeoNames URI voor Bergen is <a href="http://sws.geonames.org/2759154">http://sws.geonames.org/2759154</a>. Je ziet de identifiecatiecode die we hierboven al gebruikten in de URI terugkomen.</p>
+
+<p>Aan de URI zie je ook meteen waar de identificatiecode vandaan komt. En is het mogelijk in één veld identificatiecodes van verschillende bronnen te gebruiken zonder in de problemen te komen. TGN levert ook URI’s voor plaatsaanduidingen - die voor Bergen is <a href="http://vocab.getty.edu/tgn/7007058">http://vocab.getty.edu/tgn/7007058</a>. Had je alleen de identificatiecode <code class="highlighter-rouge">2759154</code> gehad en gedacht dat het een TGN code was, dan was je in <a href="http://vocab.getty.edu/tgn/2759154">West Fork Brush Creek</a> terecht gekomen.</p>
+
+<p>Er zijn datasets die geen URIs bieden, maar wel bruikbare id’s. De Basisadministratie Adressen en Gebouwen (BAG) is zo’n dataset.</p>
+
+<h2 id="standaardiseren-met-coördinaten-is-dat-niet-voldoende">Standaardiseren met coördinaten, is dat niet voldoende?</h2>
+
+<p>Geo-informatici opperen vaak dat je alleen met geometrie ook alles oplost. Dat is niet waar. Op basis van coördinaten weet je wel dat het om het Noord-Hollandse Bergen gaat, maar niet of het de plaats of gemeente betreft. Data verbinden op basis van coördinaten lukt wel, maar vraagt altijd enige inspanning - de eigenaar van de andere dataset heeft zijn puntje misschien vijftig of vijfhonderd meter verderop geprikt. En de verrijking gaat niet verder dan de coördinaten zelf, terwijl je bij TGN of GeoNames naast coördinaten ook nog hiërarchische gegevens, alternatieve namen, etc. tot je beschikking hebt.</p>
+
+<h2 id="handmatig-of-geautomatiseerd-standaardiseren">Handmatig of geautomatiseerd standaardiseren</h2>
+
+<p>Handmatig de juiste URI’s vinden kan via de thesaurus van <a href="http://erfgeo.nl">ErfGeo.nl</a> of rechtstreeks bij de organisatie die de URI’s die je wilt gebruiken uitgeeft, <a href="http://vocab.getty.edu/">TGN</a> of <a href="http://www.geonames.org/">GeoNames</a> bijvoorbeeld. Let er bij GeoNames op dat een URI als domein <code class="highlighter-rouge">sws.geonames.org</code> heeft, maar dat Geonames je de informatie toont op domein <code class="highlighter-rouge">www.geonames.org</code>.</p>
+
+<p>Bij grotere hoeveelheden data is het handiger een technisch iemand te vragen de data tegen een <a href="https://en.wikipedia.org/wiki/Web_API">API</a> aan te houden. GeoNames heeft een API, TGN is als linked open data gepubliceerd en heeft een sparql endpoint. De <a href="/tools/api.html">ErfGeo API</a> levert TGN, GeoNames en Gemeentegeschiedenis URI’s, en levert BAG en NWB id’s.</p>
+
+<p>De ErfGeo API levert soms zoveel informatie, dat je door de bomen het bos niet meer ziet. Er is een <a href="http://www.hicsuntleones.nl/erfgeoproxy/">ErfGeoProxy</a> beschikbaar, die de API aanroept maar alleen de broodnodige informatie doorgeeft, zodat het resultaat bijvoorbeeld bruikbaar is in <a href="http://openrefine.org/">OpenRefine</a>. We hebben een handleiding ErfGeoProxy / OpenRefine beschikbaar.</p>
+
+<p>Om ook niet-programmeurs grotere hoeveelheden data in een semi-automatisch proces te laten standaardiseren, heeft Erfgoed &amp; Locatie een <a href="/tools/standaardiseren.html">standaardiseertool</a> laten ontwikkelen. Deze tool laat je een csv-bestand met te standaardiseren plaatsnamen uploaden, standaardiseert er zelf zoveel mogelijk, en biedt voor de overige gevallen een interface waarin je zelf keuzes kan maken of URI’s in kan voeren. Er is een handleiding voor de standaardiseertool beschikbaar.</p>
+
+<h2 id="welke-uri--welk-id-voor-welk-type">Welke URI / welk id voor welk type?</h2>
+
+<p>In de voorbeelden hierboven betrof het steeds plaatsen en een enkele gemeente. Maar het kan ook om straten, adressen of gebouwen gaan. Of om de departementen die we hier kortstondig in de Franse Tijd hadden. Of om verdwenen plaatsen die TGN of GeoNames nooit gehaald hebben. Welke identifiers of URI’s gebruik je in die gevallen?</p>
+
+<p>Voor huidig Nederland kunnen we toe met de ‘Big Five’: voor plaatsen TGN of GeoNames, voor gemeenten Gemeentegeschiedenis (dat elke gemeente op een eigen URI desgewenst als html, json of rdfxml ontsluit), voor straten het Nationaal Wegenbestand (NWB) en voor gebouwen en adressen de Basisadministratie Adressen en Gebouwen (BAG).</p>
+
+<p>Bij BAG en NWB moet de aantekening gemaakt worden dat deze bronnen helemaal niet als linked data beschikbaar zijn, en dus ook geen URI’s hebben.  In dat geval kan een id worden gebruikt. Desgewenst kan het id gebruikt worden om een URI te fabrieken - in <a href="http://thesaurus.erfgeo.nl/pit/?id=bag/546100000040173">http://thesaurus.erfgeo.nl/pit/?id=bag/546100000040173</a> is het BAG id opgenomen van het gebouw dat Erfgoed Leiden en Omstreken huisvest.</p>
+
+<p>Bij het NWB was het creëren van een URI iets complexer. Het NWB bestaat namelijk niet uit straten, maar uit wegvakken - stukjes straat tussen twee kruisingen. Om de NWB data toch als straten op te kunnen nemen, hebben we de wegvakken van elke straat samengevoegd en een id gegeven als nwb/woonplaats-straatnaam. Dat levert URI’s op als <a href="http://thesaurus.erfgeo.nl/pit/?id=nwb/de-rijp-wevershof">http://thesaurus.erfgeo.nl/pit/?id=nwb/de-rijp-wevershof</a>.</p>
+
+<p>Er zijn topografische elementen die niet in de bovenstaande Big Five zijn opgenomen. Door zee verzwolgen dorpen bijvoorbeeld, of, omgekeerd, de drooggemaakte Beemstermeer. De straten die voor de Stopera zijn gesloopt zul je niet terugvinden in het NWB, en het Paleis voor Volksvlijt niet in de BAG.</p>
+
+<p>ErfGeo maakt voor elk topografisch element dat door een opgenomen dataset beschreven wordt een URI aan. Voor de Beemstermeer is dat <a href="http://thesaurus.erfgeo.nl/pit/?id=menno/5">http://thesaurus.erfgeo.nl/pit/?id=menno/5</a> geworden. Zo krijgen ook bovenstaande voorbeelden, mits opgenomen in ErfGeo, een URI.</p>
+
+<p>Nog even op een rij:</p>
+
+<table>
+<tr><th>Type</th><th>URI</th></tr>
+<tr><td>plaats</td><td>TGN, GeoNames</td></tr>
+<tr><td>gemeente</td><td>Gemeentegeschiedenis</td></tr>
+<tr><td>straat</td><td>BAG id of ErfGeo NWB id</td></tr>
+<tr><td>gebouw</td><td>BAG id</td></tr>
+<tr><td>adres</td><td>BAG id</td></tr>
+<tr><td>anders, bijv. verdwenen dorp</td><td>ErfGeo verdwenen dorp id</td></tr>
+</table>
+
+<h2 id="persistentie">Persistentie</h2>
+
+<p>Het gevaar dat altijd op de loer ligt is dat een URI niet persistent kan blijken te zijn. ErfGeo zelf is nog bezig hier een strategie voor te ontwikkelen. Wat moet ErfGeo bijvoorbeeld doen wanneer een nieuwe versie van een dataset wordt aangeleverd en daar elementen uit verdwenen zijn? Het NWB bijvoorbeeld wil vooral de huidige stand van zaken beschrijven. Als een straat fysiek verdwijnt, dan is de kans groot dat die ook uit het NWB geschrapt wordt.</p>
+
+
+        </div>
+      </div>
+    </div>
+
+    <div class="table-block">
+      <footer id="footer">
+  <div class="container">
+    <a href="/over-ons#contact">contact</a> | <a href="/over-ons">over ons</a>
+  </div>
+</footer>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-63876258-1', 'auto');
+  ga('send', 'pageview');
+</script>
+<!-- Piwik -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  _paq.push(["setDomains", ["*.erfgeo.nl"]]);
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//stats.waag.org/";
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['setSiteId', '12']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<noscript><p><img src="//stats.waag.org/piwik.php?idsite=12" style="border:0;" alt="" /></p></noscript>
+<!-- End Piwik Code -->
+    </div>
+
+  </div>
+</body>
+</html>

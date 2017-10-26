@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="utf-8">
+<title>ErfGeo | Histodraw </title>
+
+<meta name="author" content="Waag Society">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link rel="icon" type="image/png" href="/assets/images/erfgeo.png">
+
+<script src="/assets/js/d3.v3.min.js"></script>
+
+<link rel="stylesheet" href="/assets/css/style.css">
+    <!-- leaflet -->
+    <link rel="stylesheet" href="/assets/css/leaflet.css" />
+    <link rel="stylesheet" href="/assets/css/leaflet.draw.css" />
+    <link rel="stylesheet" href="/assets/css/leaflet-search.min.css" />
+    <script src="/assets/js/leaflet.js"></script>
+    <script src="/assets/js/leaflet.draw.js"></script>
+    <script src="/assets/js/leaflet-search.min.js"></script>
+
+    <!-- Load Esri Leaflet from CDN -->
+    <script src="//cdn.jsdelivr.net/leaflet.esri/1.0.0-rc.7/esri-leaflet.js"></script>
+</head>
+<body>
+<header class="header-default">
+  <a href="/" class="logo">
+    <span>Erf</span>Geo</a>
+  </a>
+  <nav id="mainmenu">
+
+<a class="menu-item " href="/thesaurus">Thesaurus</a>
+
+
+<a class="menu-item " href="/nieuws">Blog</a>
+
+
+<a class="menu-item " href="/wat-hoe">Wat? Hoe?</a>
+
+
+<a class="menu-item  current" href="/tools">Tools</a>
+</nav>
+</header>
+
+
+<div id="map" class="map-full"></div>
+<div id="map-legend" class="box">
+    <small><p>Teken lijnen en/of polygonen op de kaart. In de popup verschijnt de geometrie in GeoJSON.geometry formaat. Copy/paste :-)</p>
+</small>
+</div>
+
+<script src="/assets/js/histodraw.js"></script>
+</body>
+</html>

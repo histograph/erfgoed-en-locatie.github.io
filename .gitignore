@@ -1,5 +1,3 @@
-/_site/*
-!/_site/geothesaurus
 .sass-cache
 .DS_Store
 Gemfile.lock

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+<title>ErfGeo | Vector afbeeldingen op basis van GeoJSON </title>
+
+<meta name="author" content="Waag Society">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link rel="icon" type="image/png" href="/assets/images/erfgeo.png">
+
+<script src="/assets/js/d3.v3.min.js"></script>
+
+<link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+  <div class="table-container">
+
+    <div class="table-block footer-push">
+      <header class="header-default">
+  <a href="/" class="logo">
+    <span>Erf</span>Geo</a>
+  </a>
+  <nav id="mainmenu">
+
+<a class="menu-item " href="/thesaurus">Thesaurus</a>
+
+
+<a class="menu-item " href="/nieuws">Blog</a>
+
+
+<a class="menu-item  current" href="/wat-hoe">Wat? Hoe?</a>
+
+
+<a class="menu-item " href="/tools">Tools</a>
+</nav>
+</header>
+
+
+      <div class="container">
+        <div id="content" class="content-block">
+          <h1>Vector afbeeldingen op basis van GeoJSON</h1>
+          
+            <div class="author">door: Menno den Engelse</div>
+          
+          <p>Als je <a href="http://thesaurus.erfgeo.nl/pit/?id=menno/9">een detailpagina in de ErfGeo thesaurus</a> bekijkt dan zie je onder het kaartje een blokje <a href="https://nl.wikipedia.org/wiki/GeoJSON">GeoJSON</a>, met daarin een lange lap code met iets dat waarschijnlijk coördinaten zijn. Als je je afvraagt wat je daar in mercatorsnaam mee aan moet, dan is dit artikel voor jou.</p>
+
+<p><img src="/assets/images/geojson-voorbeeld.png" alt="haarlem" /></p>
+
+<p>Bij alle op ErfGeo aanwezige geometrieën (de puntjes, lijntjes en polygonen op de kaart) vind je zo’n stukje GeoJSON. Ook de <a href="/tools/api.html">ErfGeo API</a> spuugt GeoJSON uit (daar kunnen we verderop ons voordeel nog mee doen).</p>
+
+<h2 id="waarom-geojson">Waarom GeoJSON?</h2>
+
+<p>GeoJSON is een open formaat om geografische gegevens in op te slaan en mee uit te wisselen. Het kan zowel geometrieën als informatie over die geometrieën bevatten. Steeds meer (web)toepassingen kunnen ermee omgaan. Plak maar eens wat GeoJSON in <a href="http://geojson.io/">geojson.io</a>.</p>
+
+<h2 id="kaartjes-maken">Kaartjes maken</h2>
+
+<p>Wil je visualisaties maken op basis van geografische informatie, dan is <a href="http://www.qgis.org/nl/site/">QGIS</a> waarschijnlijk de beste en in ieder geval de goedkoopste kandidaat. Vanzelfsprekend leest en schrijft QGIS GeoJSON probleemloos.</p>
+
+<p>Maar de knoppenbalken in QGIS kunnen nogal intimiderend overkomen en de kans bestaat, zeker als je alleen wat simpele bewerkingen wilt doen, dat je liever in je vertrouwde vector programma werkt.</p>
+
+<p>Onderstaande afbeelding, die de gemeente De Rijp (rood) toont, de fusie met Graft (lichtrood), de gebiedsuitbreidingen (roze) en tenslotte de opname in Alkmaar (blauw) is gemaakt in <a href="http://bohemiancoding.com/sketch/">Sketch</a>, een vector programma voor de Mac. Maar het had ook in het gratis <a href="https://inkscape.org/nl/">Inkscape</a> of in het elke maand wederom te betalen Illustrator of elk ander programma gemaakt kunnen worden. Zolang het maar svg-bestanden leest.</p>
+
+<p><img src="/assets/images/graftderijp-alkmaar.png" alt="van gemeente De Rijp naar Alkmaar" /></p>
+
+<h2 id="geojson-omzetten-naar-een-svg-bestand">GeoJSON omzetten naar een svg-bestand</h2>
+
+<p>Het daadwerkelijke omzetten van de GeoJSON naar svg heb ik op <a href="http://mapstarter.com/">mapstarter.com</a> gedaan. Om de GeoJSON zelf te krijgen had ik naar de respectieve detailpagina’s van gemeente <a href="http://thesaurus.erfgeo.nl/pit/?id=gemeentegeschiedenis-geometries/De_Rijp-1812">De Rijp</a>, <a href="http://thesaurus.erfgeo.nl/hgconcept/?id=geonames/2755374">Graft-De Rijp</a> en <a href="http://thesaurus.erfgeo.nl/pit/?id=bestuurlijke-grenzen-gemeenten-actueel/0361">Alkmaar</a> kunnen gaan.</p>
+
+<p>In plaats daarvan heb ik, als aangekondigd, mijn voordeel gedaan met de api. Ik heb de api gevraagd naar geoconcepten van het type gemeente (hg:Municipality) die “De Rijp” of “Alkmaar” in de naam hebben: <a href="https://api.histograph.io/search?q=&quot;De Rijp&quot;&#124;&quot;Alkmaar&quot;&amp;type=hg:Municipality">https://api.histograph.io/search?q=”De Rijp”|“Alkmaar”&amp;type=hg:Municipality</a>. Zo had ik alle geometrieën in één keer, in de juiste schaal en op de juiste plaats ten opzichte van elkaar.</p>
+
+<p>We hadden de api ook kunnen vragen naar alle departementen uit de Franse tijd: <a href="https://api.histograph.io/search?q=*&amp;type=hg:Departement">https://api.histograph.io/search?q=*&amp;type=hg:Departement</a></p>
+
+<p><img src="/assets/images/geojson-departementen.png" alt="Franse Departementen" /></p>
+
+<h2 id="nog-een-voorbeeld">Nog een voorbeeld</h2>
+
+<p>Stel, je wilt een vectorafbeelding hebben van de bebouwde kom van Rotterdam om - we houden het simpel - dit op een t-shirt te printen. Dan is het stappenplan als volgt:</p>
+
+<ol>
+  <li>Zoek op Rotterdam en zorg dat je terecht komt op <a href="http://thesaurus.erfgeo.nl/pit/?id=atlas-verstedelijking/Rotterdam-2010">thesaurus.erfgeo.nl/pit/?id=atlas-verstedelijking/Rotterdam-2010</a></li>
+  <li>Kopieer de geojson en plak deze in een leeg tekstbestand (het moet platte tekst blijven, dus vermijd Word).</li>
+  <li>Sla het bestand op als <code class="highlighter-rouge">rotterdam.geojson</code>.</li>
+  <li>Ga naar <a href="http://mapstarter.com/">mapstarter.com/</a>, kies daar onder <code class="highlighter-rouge">choose file</code> het zojuist gemaakte bestand.</li>
+  <li>Onder <code class="highlighter-rouge">download</code> download je het svg-bestand.</li>
+  <li>Open het svg-bestand in je vector programma.</li>
+  <li>Doe er mee wat je wilt.</li>
+</ol>
+
+<p><img src="/assets/images/tshirt-rotterdam.png" alt="t-shirt Rotterdam" /></p>
+
+<h2 id="toekomst">Toekomst</h2>
+
+<p>In de toekomst hopen we het mogelijk te maken geojson te leveren naar al je specifieke wensen. Alle straten in een bepaalde stad bijvoorbeeld, of de geometrieën van alle kerken in Amsterdam, of alle gemeentes in Drenthe in 1859. We houden je op de hoogte!</p>
+
+
+        </div>
+      </div>
+    </div>
+
+    <div class="table-block">
+      <footer id="footer">
+  <div class="container">
+    <a href="/over-ons#contact">contact</a> | <a href="/over-ons">over ons</a>
+  </div>
+</footer>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-63876258-1', 'auto');
+  ga('send', 'pageview');
+</script>
+<!-- Piwik -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  _paq.push(["setDomains", ["*.erfgeo.nl"]]);
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//stats.waag.org/";
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['setSiteId', '12']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<noscript><p><img src="//stats.waag.org/piwik.php?idsite=12" style="border:0;" alt="" /></p></noscript>
+<!-- End Piwik Code -->
+    </div>
+
+  </div>
+</body>
+</html>

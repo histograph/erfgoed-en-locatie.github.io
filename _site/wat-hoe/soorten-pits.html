@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+<title>ErfGeo | Soorten PiTs </title>
+
+<meta name="author" content="Waag Society">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link rel="icon" type="image/png" href="/assets/images/erfgeo.png">
+
+<script src="/assets/js/d3.v3.min.js"></script>
+
+<link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+  <div class="table-container">
+
+    <div class="table-block footer-push">
+      <header class="header-default">
+  <a href="/" class="logo">
+    <span>Erf</span>Geo</a>
+  </a>
+  <nav id="mainmenu">
+
+<a class="menu-item " href="/thesaurus">Thesaurus</a>
+
+
+<a class="menu-item " href="/nieuws">Blog</a>
+
+
+<a class="menu-item  current" href="/wat-hoe">Wat? Hoe?</a>
+
+
+<a class="menu-item " href="/tools">Tools</a>
+</nav>
+</header>
+
+
+      <div class="container">
+        <div id="content" class="content-block">
+          <h1>Soorten PiTs</h1>
+          
+          <p>De ene Plaats in Tijd (Place in Time) is de andere niet en het is van belang om verschillende ordes van grootte (of voorkomen in de tijd) van andere te kunnen onderscheiden. 
+Om dat goed te kunnen doen zijn verschillende soorten PiTs gedefiniëerd. Op dit moment (juni 2015) zijn dat de volgende</p>
+
+<h2 id="de-soorten-op-een-rij">De soorten op een rij</h2>
+
+<ul>
+  <li>hg:Address</li>
+  <li>hg:Monument</li>
+  <li>hg:Fort</li>
+  <li>hg:Building</li>
+  <li>hg:Street</li>
+  <li>hg:Neighbourhood</li>
+  <li>hg:Borough</li>
+  <li>hg:Place</li>
+  <li>hg:Municipality</li>
+  <li>hg:Water</li>
+  <li>hg:Polder</li>
+  <li>hg:Area</li>
+  <li>hg:Region</li>
+  <li>hg:Province</li>
+  <li>hg:Baljuwschap</li>
+  <li>hg:Barony</li>
+  <li>hg:Departement</li>
+  <li>hg:Countship</li>
+  <li>hg:Heerlijkheid</li>
+  <li>hg:Country</li>
+</ul>
+
+<p>Voor de meest up to date versie van alle types; zie het <a href="https://raw.githubusercontent.com/histograph/schemas/master/json/pits.schema.json" title="pits.schema.json op github">pits schema</a> op github.</p>
+
+<h2 id="zoeken-op-type">Zoeken op type</h2>
+<p>Naar al deze types kan ook specifiek gezocht worden:</p>
+
+<h3 id="zoek-naar-de-gemeente-woerden">Zoek naar de gemeente “Woerden”</h3>
+
+<ul>
+  <li><a href="http://erfgeo.nl/thesaurus/#search=woerden%20type=hg:Municipality">erfgeo.nl/thesaurus/#search=woerden type=hg:Municipality</a></li>
+</ul>
+
+<h3 id="zoek-naar-plaatsen-die-woerden-in-hun-naam-hebben">Zoek naar plaatsen die “Woerden” in hun naam hebben</h3>
+
+<ul>
+  <li><a href="http://erfgeo.nl/thesaurus/#search=woerden%20type=hg:Place">erfgeo.nl/thesaurus/#search=woerden type=hg:Place</a></li>
+</ul>
+
+<h3 id="zoek-naar-straten-die-woerden-bevatten">Zoek naar straten die “Woerden” bevatten</h3>
+
+<ul>
+  <li><a href="http://erfgeo.nl/thesaurus/#search=woerden%20type=hg:Street">erfgeo.nl/thesaurus/#search=woerden type=hg:Street</a></li>
+</ul>
+
+<p>Ook hele andere dingen zijn mogelijk:</p>
+
+<h3 id="laat-alle-provincies-zien">Laat alle provincies zien</h3>
+<ul>
+  <li><a href="http://erfgeo.nl/thesaurus/#search=*%20type=hg:Province">erfgeo.nl/thesaurus/#search=*%20type=hg:Province</a></li>
+</ul>
+
+<h2 id="hierarchische-relatie-tussen-pits">Hierarchische relatie tussen PiTs</h2>
+
+<p>Op dit moment kan elke type PiT een relatie hebben met een ander type PiT. Dit zal echter niet altijd blijven kunnen en het team is bezig om restricties aan te brengen aan de relaties die gelegd kunnen worden. 
+Het komt voor dat sommige typen PiTs slechts een beperkte periode in een bepaalde relatie met andere typen PiTs, staan. Bijvoorbeeld de volgende:</p>
+
+<p>In de Frans-Bataafse tijd waren er in de Nederlanden geen provincies maar had je departementen, dus moet alleen voor die periode de volgende relatie kunnen bestaan:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code> "hierarchy": [
+       "hg:Place",
+       "hg:Municipality",
+       "hg:Departement",
+       "hg:Country"
+     ]
+</code></pre>
+</div>
+
+<p>En na 1815 ziet dat er dan als volgt uit:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>"hierarchy": [
+      "hg:Place",
+      "hg:Municipality",
+      "hg:Province",
+      "hg:Country"
+    ]
+</code></pre>
+</div>
+
+<p>De hierarchieën die gehanteerd worden zullen via <a href="https://raw.githubusercontent.com/histograph/schemas/master/ontology/hierarchies.json" title="hierarchies.json file op github">deze link</a> terug te vinden zijn.</p>
+
+
+        </div>
+      </div>
+    </div>
+
+    <div class="table-block">
+      <footer id="footer">
+  <div class="container">
+    <a href="/over-ons#contact">contact</a> | <a href="/over-ons">over ons</a>
+  </div>
+</footer>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-63876258-1', 'auto');
+  ga('send', 'pageview');
+</script>
+<!-- Piwik -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  _paq.push(["setDomains", ["*.erfgeo.nl"]]);
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//stats.waag.org/";
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['setSiteId', '12']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<noscript><p><img src="//stats.waag.org/piwik.php?idsite=12" style="border:0;" alt="" /></p></noscript>
+<!-- End Piwik Code -->
+    </div>
+
+  </div>
+</body>
+</html>

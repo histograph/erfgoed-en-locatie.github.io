@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+<title>ErfGeo | Data toevoegen aan ErfGeo </title>
+
+<meta name="author" content="Waag Society">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link rel="icon" type="image/png" href="/assets/images/erfgeo.png">
+
+<script src="/assets/js/d3.v3.min.js"></script>
+
+<link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+  <div class="table-container">
+
+    <div class="table-block footer-push">
+      <header class="header-default">
+  <a href="/" class="logo">
+    <span>Erf</span>Geo</a>
+  </a>
+  <nav id="mainmenu">
+
+<a class="menu-item " href="/thesaurus">Thesaurus</a>
+
+
+<a class="menu-item " href="/nieuws">Blog</a>
+
+
+<a class="menu-item  current" href="/wat-hoe">Wat? Hoe?</a>
+
+
+<a class="menu-item " href="/tools">Tools</a>
+</nav>
+</header>
+
+
+      <div class="container">
+        <div id="content" class="content-block">
+          <h1>Data toevoegen aan ErfGeo</h1>
+          
+            <div class="author">door: Menno den Engelse</div>
+          
+          <p>Er zit inmiddels <a href="/wat-hoe/watvoordata.html">flink wat data</a> in ErfGeo. Maar hoe voeg je er data aan toe?</p>
+
+<p>Erfgoedinstellingen kunnen zelf een dataset met PiTs maken en aanleveren. Een medewerker van ErfGeo controleert en importeert de data vervolgens. Heb je hier hulp bij nodig, dan kan je altijd even contact opnemen.</p>
+
+<p>Dit artikel geeft een aantal voorbeelden van PiTs die je in zo’n dataset op kan nemen.</p>
+
+<p>##Aanleg van een bestaande straat dateren</p>
+
+<p>Het in ErfGeo opgenomen Nationaal Wegenbestand (NWB) bevat alle huidige straten van Nederland, maar vertelt niet wanneer een straat is ontstaan. Nou weet ik dat het Wevershof in De Rijp rond 1971 is aangelegd. Die straat aanpassen in de NWB zelf is niet mogelijk. Immers, ErfGeo bevat data uit bronnen, en alleen als de data in de bron wijzigt kan de wijziging vervolgens in ErfGeo worden geïmporteerd.</p>
+
+<p>Wat wel mogelijk is, is een PiT maken in een eigen dataset. Als we die een relatie geven met de PiT in kwestie en een beginjaar toevoegen, dan hebben we ons doel bereikt.</p>
+
+<table>
+	<tr>
+		<th>id</th>
+		<td>1</td>
+	</tr>
+	<tr>
+		<th>name</th>
+		<td>Wevershof</td>
+	</tr>
+	<tr>
+		<th>type</th>
+		<td>hg:Street</td>
+	</tr>
+	<tr>
+		<th>sameHgConcept</th>
+		<td>nwb/de-rijp-wevershof</td>
+	</tr>
+	<tr>
+		<th>periodValidFor</th>
+		<td>existence</td>
+	</tr>
+	<tr>
+		<th>validSince</th>
+		<td>1970-1972</td>
+	</tr>
+</table>
+
+<p>Elke PiT die we maken moet of een binnen de dataset uniek id hebben of een URI. Verder heeft een PiT meestal een naam en altijd een type. Met de laatste twee waarden in het voorbeeld hierboven zeggen we dat de straat die de nieuwe PiT beschrijft dezelfde is als het Wevershof in het Nationaal Wegenbestand en dat de straat ontstaan is tussen 1970 en 1972.</p>
+
+<p>De velden die de periode beschrijven, validSince en validUntil, mogen als datum <code class="highlighter-rouge">yyyy-mm-dd</code> of als jaar <code class="highlighter-rouge">yyyy</code> gegeven worden. Beide velden mogen ook als twee afzonderlijke waarden aangeleverd worden om een periode aan te geven, bijvoorbeeld met een veld validSince-minValue en een veld validSince-maxValue.</p>
+
+<p>Overigens geldt voor alle veldnamen: de precieze naamgeving maakt niet uit, tijdens het importeren worden de velden gemapt.</p>
+
+<h2 id="een-historische-straatnaam-toevoegen">Een historische straatnaam toevoegen</h2>
+
+<p>In De Rijp loopt, ten noorden van de hoofdstraat, een klein straatje dat ‘t Achterom heet. Tot 1970 heette dit straatje Noorderstraat, maar in dat jaar fuseerde de gemeente De Rijp met de gemeente Graft en in die gemeente liep ook al een Noorderstraat.</p>
+
+<p>Met een PiT die de volgende velden bevat kunnen we die informatie toevoegen:</p>
+
+<table>
+	<tr>
+		<th>id</th>
+		<td>2</td>
+	</tr>
+	<tr>
+		<th>name</th>
+		<td>Noorderstraat</td>
+	</tr>
+	<tr>
+		<th>type</th>
+		<td>hg:Street</td>
+	</tr>
+	<tr>
+		<th>periodValidFor</th>
+		<td>toponym</td>
+	</tr>
+	<tr>
+		<th>sameHgConcept</th>
+		<td>nwb/de-rijp-t-achterom</td>
+	</tr>
+	<tr>
+		<th>validUntil</th>
+		<td>1970</td>
+	</tr>
+</table>
+
+<h2 id="de-beemstermeer---een-verdwenen-meer-toevoegen">De Beemstermeer - een verdwenen meer toevoegen</h2>
+
+<p>Ontginning van veen zorgde ervoor dat in de 12e eeuw het riviertje De Bamestra uitgroeide tot een binnenzee, een meer dat in open verbinding stond met de Zuiderzee. Begin 17e eeuw werd het meer drooggemaakt.</p>
+
+<p>Omdat ErfGeo nog geen PiT van de Beemstermeer bevat, maken we er eentje aan. En we geven de nieuwe PiT een geometrie. Een geometrie kan een punt, een lijn of een polygoon zijn. Een punt mag als twee velden (lengte- en breedtegraad) meegeleverd worden, in de andere gevallen is het verplicht geojson aan te leveren. Een tool als <a href="/tools/histodraw.html">Histodraw</a> of <a href="http://geojson.io">geojson.io</a> maakt dat een relatief eenvoudige exercitie.</p>
+
+<table>
+	<tr>
+		<th>id</th>
+		<td>5</td>
+	</tr>
+	<tr>
+		<th>name</th>
+		<td>Beemstermeer</td>
+	</tr>
+	<tr>
+		<th>type</th>
+		<td>hg:Water</td>
+	</tr>
+	<tr>
+		<th>validSince</th>
+		<td>1150-1250</td>
+	</tr>
+	<tr>
+		<th>validUntil</th>
+		<td>1607-1612</td>
+	</tr>
+	<tr>
+		<th>periodValidFor</th>
+		<td>existence</td>
+	</tr>
+	<tr>
+		<th>geometry</th>
+		<td>{"type":"Polygon","coordinates":[[[4.836559295654297,52.540449426243796],[4.8427391052246085,52.5433726592131],[ ... voor de leesbaarheid is de polygoon iets ingekort! ... ],[4.835357666015625,52.53648187013421],[4.836559295654297,52.540449426243796]]]}</td>
+	</tr>
+</table>
+
+<p>Op dezelfde wijze kan je ook een verdwenen gebouw toevoegen, al zal de geometrie daar een kleiner oppervlak beslaan.</p>
+
+<h2 id="midden-beemster-en-de-rijp---het-ontstaan-van-een-plaats-dateren">Midden-Beemster en De Rijp - het ontstaan van een plaats dateren</h2>
+
+<p>Tot dan de havenbuurt van Graft, splitste het rijker wordende De Rijp zich in 1607 af en werd een zelfstandige Banne. Het verderop gelegen Midden-Beemster kon vanzelfsprekend pas ontstaan na de drooglegging van de Beemstermeer.</p>
+
+<p>Bij het leggen van de sameHgConcept relatie kan je verwijzen naar zowel een ErfGeo PiT id als een externe URI. Een PiT heeft alleen een id als ie geen URI heeft. De Thesaurus of Geographic Names heeft URIs, dus die gebruiken we hier om te verwijzen.</p>
+
+<table>
+	<tr>
+		<th>id</th>
+		<td>3</td>
+	</tr>
+	<tr>
+		<th>name</th>
+		<td>De Rijp</td>
+	</tr>
+	<tr>
+		<th>type</th>
+		<td>hg:Place</td>
+	</tr>
+	<tr>
+		<th>periodValidFor</th>
+		<td>existence</td>
+	</tr>
+	<tr>
+		<th>sameHgConcept</th>
+		<td>http://vocab.getty.edu/tgn/1047707</td>
+	</tr>
+	<tr>
+		<th>validSince</th>
+		<td>1607</td>
+	</tr>
+</table>
+
+<table>
+	<tr>
+		<th>id</th>
+		<td>4</td>
+	</tr>
+	<tr>
+		<th>name</th>
+		<td>Midden-Beemster</td>
+	</tr>
+	<tr>
+		<th>type</th>
+		<td>hg:Place</td>
+	</tr>
+	<tr>
+		<th>periodValidFor</th>
+		<td>existence</td>
+	</tr>
+	<tr>
+		<th>sameHgConcept</th>
+		<td>http://vocab.getty.edu/tgn/1047948</td>
+	</tr>
+	<tr>
+		<th>validSince</th>
+		<td>1623</td>
+	</tr>
+</table>
+
+<h2 id="de-naam-van-een-gebouw-toevoegen">De naam van een gebouw toevoegen</h2>
+
+<p>In principe heeft elk gebouw in Nederland een BAG id. Maar er zijn ook gebouwen met een welluidender naam. Zo staat het pand met BAG id 365100000000350 bekend als ‘De Arend’, vanwege de arend die de top van het pand siert. Die informatie kunnen we als volgt opnemen:</p>
+
+<table>
+	<tr>
+		<th>id</th>
+		<td>6</td>
+	</tr>
+	<tr>
+		<th>name</th>
+		<td>De Arend</td>
+	</tr>
+	<tr>
+		<th>type</th>
+		<td>hg:Building</td>
+	</tr>
+	<tr>
+		<th>sameHgConcept</th>
+		<td>bag/365100000000350</td>
+	</tr>
+</table>
+
+<h2 id="omnummeringen">Omnummeringen</h2>
+
+<p>Elke archivaris weet: een adres is een dynamisch ding. Niet alleen straten veranderen van naam, ook nummeringen willen nogal eens wijzigen. Hier geven we op dat het huidige adres Oosteinde 51, bij de BAG bekend onder id 0365200000001832, tussen 1961 en 2002 bekend stond als nummer 47.</p>
+
+<table>
+	<tr>
+		<th>id</th>
+		<td>8</td>
+	</tr>
+	<tr>
+		<th>name</th>
+		<td>Oosteinde 47</td>
+	</tr>
+	<tr>
+		<th>type</th>
+		<td>hg:Address</td>
+	</tr>
+	<tr>
+		<th>validSince</th>
+		<td>1961</td>
+	</tr>
+	<tr>
+		<th>validUntil</th>
+		<td>2002</td>
+	</tr>
+	<tr>
+		<th>periodValidFor</th>
+		<td>toponym</td>
+	</tr>
+	<tr>
+		<th>sameHgConcept</th>
+		<td>bag/365200000001832</td>
+	</tr>
+</table>
+
+<h2 id="een-gemeentelijke-herindeling-graft-de-rijp-absordbedby-alkmaar">Een gemeentelijke herindeling: Graft-De Rijp ‘absordbedBy’ Alkmaar</h2>
+
+<p>Op 1 januari 2015 is de gemeente Graft-De Rijp opgegaan in de gemeente Alkmaar. Deze gemeentelijke herindeling is blijkbaar nog niet verwerkt in alle de door ErfGeo gebruikte datasets. Maar we kunnen zelf een PiT aanmaken die deze gemeentelijke herindeling beschrijft.</p>
+
+<p>Met de sameHgConcept relatie koppelen we de nieuwe PiT aan de bestaande gemeente Graft-De Rijp PiT’s, en met de absorbedBy relatie vertellen we dat de gemeente op haar einddatum is opgegaan in Alkmaar.</p>
+
+<table>
+	<tr>
+		<th>id</th>
+		<td>7</td>
+	</tr>
+	<tr>
+		<th>name</th>
+		<td>Graft-De Rijp</td>
+	</tr>
+	<tr>
+		<th>type</th>
+		<td>hg:Municipality</td>
+	</tr>
+	<tr>
+		<th>validSince</th>
+		<td>1970</td>
+	</tr>
+	<tr>
+		<th>validUntil</th>
+		<td>2015-01-01</td>
+	</tr>
+	<tr>
+		<th>sameHgConcept</th>
+		<td>http://www.gemeentegeschiedenis.nl/gemeentenaam/Graft-De_Rijp</td>
+	</tr>
+	<tr>
+		<th>absorbedBy</th>
+		<td>http://www.gemeentegeschiedenis.nl/gemeentenaam/Alkmaar</td>
+	</tr>
+</table>
+
+<p>Bovenstaande informatie is allemaal terug te vinden in <a href="/assets/examples/voorbeelden-menno.csv">dit csv-bestand</a>, waarmee ik de dataset op ErfGeo heb aangemaakt.</p>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="table-block">
+      <footer id="footer">
+  <div class="container">
+    <a href="/over-ons#contact">contact</a> | <a href="/over-ons">over ons</a>
+  </div>
+</footer>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-63876258-1', 'auto');
+  ga('send', 'pageview');
+</script>
+<!-- Piwik -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  _paq.push(["setDomains", ["*.erfgeo.nl"]]);
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//stats.waag.org/";
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['setSiteId', '12']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<noscript><p><img src="//stats.waag.org/piwik.php?idsite=12" style="border:0;" alt="" /></p></noscript>
+<!-- End Piwik Code -->
+    </div>
+
+  </div>
+</body>
+</html>
