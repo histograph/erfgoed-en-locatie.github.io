@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>ErfGeo | Nederlandse topografie door de tijd (beta) </title>
+<title>ErfGeo | Nederlandse topografie door de tijd </title>
 
 <meta name="author" content="Waag Society">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">

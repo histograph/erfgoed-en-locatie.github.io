@@ -1075,6 +1075,17 @@ header.header-default {
 header .logo span {
   font-weight: 700;
 }
+header .logo sup {
+  vertical-align: super;
+  top: -1em;
+  padding: 0.1em 0.25em;
+  background: #f22c5a;
+  color: #FFF;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0;
+  border-radius: 0.35em;
+}
 header a.logo {
   margin-left: 1rem;
   font-size: 24px;
