@@ -30,15 +30,3 @@
 .pvf-icon{
   width: 16px;
 }
-
-.CodeMirror {
-  background-color: $color-box-item !important;
-  font-size: 0.8em;
-}
-
-table.sortable th.asc:before{
-  content: '\25b4';
-}
-table.sortable th.desc:before{
-  content: '\25be';
-}

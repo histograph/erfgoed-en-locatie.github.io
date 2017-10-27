@@ -65,14 +65,28 @@ table.compact {
   }
 }
 
-table.no-borders {
-  tbody tr:first-child {
-    border-top: 1px solid black;
-  }
-  tr.border-bottom {
-    border-bottom: 1px solid black;
-  }
-  td {
-    border-bottom: none;
-  }
+table.sortable {
+  th {
+    position: relative;
+    padding-left: 1rem;
+
+    &:before,
+    &:after {
+      position: absolute;
+      left: 0.4em;
+    }
+    &:before {
+      top: 0.95em;
+      content: "›";
+      transform: rotate(-90deg);
+    }
+    &:after {
+      bottom: 0.5em;
+      content: "‹";
+      transform: rotate(-90deg);
+    }
+
+    &.asc:before { display: none; }
+    &.desc:after { display: none; }
+  } 
 }
