@@ -31,15 +31,12 @@ if(isset($pit['validUntil'])){
 
 ?>
 
-
-<h1><?= $pit['name'] ?></h1>
-
 <div class="content-block">
+  <h1><?= $pit['name'] ?></h1>
+  <p>Onderdeel van hgconcept <a href="<?= $this->config->item('base_url') ?>hgconcept/?id=<?= $hgconcept ?>"><?= $hgconceptname ?></a></p>
 
   <div class="row">
     <div class="six columns">
-
-      <p>Onderdeel van hgconcept <a href="<?= $this->config->item('base_url') ?>hgconcept/?id=<?= $hgconcept ?>"><?= $hgconceptname ?></a></p>
 
       <h3>Kenmerken</h3>
       <table class="table table-striped">
@@ -85,14 +82,12 @@ if(isset($pit['validUntil'])){
 
     </div>
     <div class="six columns">
-
       <? if(isset($pit['geometry'])){ ?>
-
+        <h3>Kaart</h3>
         <div style="height:300px; background-color:#eee;" id="map"></div>
 
         <h3>GeoJSON</h3>
-        <textarea rows="6" class="form-control" id="geojson"></textarea>
-
+        <textarea rows="6" id="geojson"></textarea>
       <? } ?>
     </div>
   </div>

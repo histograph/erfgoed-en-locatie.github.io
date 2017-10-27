@@ -44,12 +44,9 @@
         <p>Elke plaats, bestuurlijke eenheid, straat, zelfs elk gebouw en elk adres dat ooit in Nederland bestaan heeft kennen - dat is onze ambitie.</p>
       </div>
     </div>
-    <div id="searchbox">
-      <div class="row-flex">
-        <input type="text" id="searchstring" placeholder="plaatsnaam, straatnaam, etc." data-keyuphandler="thesaurusSearch"/>
-        <button onclick="search();">Zoek</button>
-      </div>
-      <small>Bijvoorbeeld:
+    <div class="row" id="search">
+      <h3>Zoeken in de geothesaurus</h3>
+      <small class="examples">Bijvoorbeeld:
           <a href="/thesaurus/#search=%22Heyloe%22">Heyloe</a>, 
           <a href="/thesaurus/#search=%22Nieuwer Amstel%22">Nieuwer Amstel</a>, 
           <a href="/thesaurus/#search=%22Worcum%22">Worcum</a>, 
@@ -59,9 +56,69 @@
           <a href="/thesaurus/#search=%22Monster%22">Monster</a>, 
           <a href="/thesaurus/#search=%22Dorestad%22">Dorestad</a>
       </small>
-    </div>
+      <div id="searchbox">
+  <div class="row-flex">
+    <input type="text" id="searchstring" placeholder="plaatsnaam, straatnaam, etc." data-keyuphandler="thesaurusSearch"/>
+    <button onclick="search();">Zoek</button>
   </div>
+  <input id="searchtypemap" type="radio" name="searchtype" value="map" checked>
+  <label for="searchtypemap"><span></span>Zoeken via kaart</label>
+  <input id="searchtypetext" type="radio" name="searchtype" value="text">
+  <label for="searchtypetext"><span></span>Tekstueel zoeken</label>
+</div>
+<script type="text/javascript">
+  function getURLParameter(name) {
+    return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search) || [null, ''])[1].replace(/\+/g, '%20')) || null;
+  }
 
+  // initialize form
+  var q = getURLParameter('q');
+  if (q) {
+    document.getElementById('searchstring').value = q;
+  }
+
+  var url = window.location.href;
+  if (url.indexOf('thesaurus') !== -1) {
+    document.getElementById('searchtypetext').checked = true;
+  }
+
+
+  var keyHandlerMap = {
+    thesaurusSearch: thesaurusSearchKeyUp
+  };
+
+  function genericKeyHandler(e){
+    var target = e.target || e.srcElement,
+      handlerName = target.dataset.keyuphandler,
+      handler = keyHandlerMap[handlerName];
+
+    if(handler){
+      handler.call(target, e);
+    }
+  }
+
+  function thesaurusSearchKeyUp(e){
+    var enterCode = 13;
+
+    if(e.keyCode === enterCode){
+      search();
+    }
+  }
+
+  document.addEventListener('keyup', genericKeyHandler);
+
+
+  function search(){
+    var searchString = document.getElementById('searchstring').value;
+    var searchType = document.querySelector('input[name="searchtype"]:checked').value;
+    var searchPath = (searchType === 'map') ? '/thesaurus/#search=' : '/geothesaurus/?q='
+
+    if (searchString) {
+      location.href = searchPath + searchString;
+    }
+  }
+</script>
+    </div>
 </header>
 
 
@@ -130,39 +187,6 @@
 	</div>
 
 </div>
-
-<script type="text/javascript">
-	var keyHandlerMap = {
-			thesaurusSearch: thesaurusSearchKeyUp
-		};
-
-	function genericKeyHandler(e){
-		var target = e.target || e.srcElement,
-			handlerName = target.dataset.keyuphandler,
-			handler = keyHandlerMap[handlerName];
-
-		if(handler){
-			handler.call(target, e);
-		}
-	}
-
-	function thesaurusSearchKeyUp(e){
-		var enterCode = 13;
-
-		if(e.keyCode === enterCode){
-			search();
-			//location.href = '/thesaurus/#search=' + this.value
-		}
-	}
-
-	document.addEventListener('keyup', genericKeyHandler);
-
-	function search(){
-		var searchstring = document.getElementById('searchstring').value;
-		location.href = '/thesaurus/#search=' + searchstring;
-	}
-</script>
-
 
           </div>
         </div>

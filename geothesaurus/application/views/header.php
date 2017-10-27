@@ -24,18 +24,4 @@ layout: php
 
       <div class="container">
         <div id="content" class="wide">
-
-        <div id="search">
-          <? if($this->router->fetch_method() != "index" || $this->router->fetch_class() != "start"){ ?>
-          <form class="row-flex" action="<?= $this->config->item('base_url') ?>" onsubmit="toViewer(); return false;">
-            <input value="" type="text" class="form-control" name="q" id="q" /> <button>zoek</button>
-          </form>
-
-          <script type="text/javascript">
-          function toViewer() {
-            //window.location.href = '<?= $this->config->item('base_url') ?>#search=' + $('#q').val();
-            window.location.href = '<?= $this->config->item('base_url') ?>?q=' + $('#q').val();
-          }
-          </script>
-          <? } ?>
-        </div>
+        {% include searchbox.html %}

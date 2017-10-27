@@ -14,12 +14,9 @@
         <p>Elke plaats, bestuurlijke eenheid, straat, zelfs elk gebouw en elk adres dat ooit in Nederland bestaan heeft kennen - dat is onze ambitie.</p>
       </div>
     </div>
-    <div id="searchbox">
-      <div class="row-flex">
-        <input type="text" id="searchstring" placeholder="plaatsnaam, straatnaam, etc." data-keyuphandler="thesaurusSearch"/>
-        <button onclick="search();">Zoek</button>
-      </div>
-      <small>Bijvoorbeeld:
+    <div class="row" id="search">
+      <h3>Zoeken in de geothesaurus</h3>
+      <small class="examples">Bijvoorbeeld:
           <a href="/thesaurus/#search=%22Heyloe%22">Heyloe</a>, 
           <a href="/thesaurus/#search=%22Nieuwer Amstel%22">Nieuwer Amstel</a>, 
           <a href="/thesaurus/#search=%22Worcum%22">Worcum</a>, 
@@ -29,7 +26,6 @@
           <a href="/thesaurus/#search=%22Monster%22">Monster</a>, 
           <a href="/thesaurus/#search=%22Dorestad%22">Dorestad</a>
       </small>
+      {% include searchbox.html %}
     </div>
-  </div>
-
 </header>

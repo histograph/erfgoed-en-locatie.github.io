@@ -2,13 +2,14 @@
 $pvflabels = array("existence" => "bestaan", "geometry" => "geometrie", "toponym" => "toponiem");
 ?>
 
-<h1><?php echo '<em>' . $type . '</em> ' . preferredName($pits) ?></h1>
-
 <div class="content-block">
-  <?php if(count($pits)==0){ ?>
+  <h1><?php echo '<em>' . $type . '</em> ' . preferredName($pits) ?></h1>
+
+<?php if(count($pits)==0){ ?>
     <p>De door u gevolgde url heeft geen resultaat opgeleverd.</p>
   <?php }else{ ?>
-  <p>Dit concept van het type <em><?php echo $type ?></em> is samengesteld uit de volgende 'Plaatsen in Tijd' (PiT's)</p>
+  <p>Dit concept van het type <em><?php echo $type ?></em> is samengesteld uit de volgende 'Plaatsen in Tijd' (PiT's):</p>
+  <p>&nbsp;</p>
 
   <h3>PiT's met een geometrie</h3>
   <table class="data sortable">

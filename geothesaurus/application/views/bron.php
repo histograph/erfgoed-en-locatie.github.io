@@ -1,6 +1,4 @@
 
-<p><a href="<?= $this->config->item('base_url') ?>bronnen">bekijk alle bronnen</a></p>
-
 <div class="content-block">
 
   <h1><?= $source['title'] ?></h1>
@@ -33,3 +31,5 @@
   </div>
 
 </div>
+
+<p><a href="<?= $this->config->item('base_url') ?>bronnen">bekijk alle bronnen</a></p>

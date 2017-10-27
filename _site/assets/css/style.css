@@ -418,7 +418,6 @@ optgroup {
   box-sizing: border-box;
 }
 
-/* For devices larger than 550px */
 @media (min-width: 550px) {
   .column,
   .columns {
@@ -563,7 +562,6 @@ optgroup {
     margin-left: 52%;
   }
 }
-.container:after,
 .row:after {
   content: "";
   display: table;
@@ -591,7 +589,7 @@ h1:last-child, h2:last-child, h3:last-child, h4:last-child, h5:last-child, h6:la
 }
 
 h1 {
-  font-size: 42px;
+  font-size: 38px;
   margin-bottom: 2rem;
   font-weight: 400;
   line-height: 1.2em;
@@ -608,6 +606,7 @@ h2 {
 
 h3 {
   font-size: 20px;
+  margin-bottom: 0.5rem;
   font-weight: 400;
   text-transform: uppercase;
   line-height: 1.3em;
@@ -791,8 +790,10 @@ select {
   border: none;
   border-bottom: 2px solid #eee;
   box-shadow: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
-
 input[type="email"]:focus,
 input[type="number"]:focus,
 input[type="search"]:focus,
@@ -805,19 +806,17 @@ select:focus {
   border-bottom: 2px solid #115577;
   outline: 0;
 }
-
-/* Removes awkward default styles on some inputs for iOS */
-input[type="email"],
-input[type="number"],
-input[type="search"],
-input[type="text"],
-input[type="tel"],
-input[type="url"],
-input[type="password"],
-textarea {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+input[type="email"]::placeholder,
+input[type="number"]::placeholder,
+input[type="search"]::placeholder,
+input[type="text"]::placeholder,
+input[type="tel"]::placeholder,
+input[type="url"]::placeholder,
+input[type="password"]::placeholder,
+textarea::placeholder,
+select::placeholder {
+  color: #bfbfbf;
+  font-style: italic;
 }
 
 textarea {
@@ -847,6 +846,45 @@ fieldset {
 input[type="checkbox"],
 input[type="radio"] {
   display: inline;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+input[type="radio"] + label {
+  display: inline-block;
+  margin-right: 1rem;
+  cursor: pointer;
+}
+
+input[type="radio"] + label span {
+  position: relative;
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin: -3px 0.5rem 0 0;
+  vertical-align: middle;
+  border-radius: 50%;
+  background-color: #FFF;
+  cursor: pointer;
+  box-shadow: 0px 1px 5px rgba(50, 50, 50, 0.1);
+}
+
+input[type="radio"]:checked + label span:after {
+  content: " ";
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 7px;
+  height: 7px;
+  background-color: #000000;
+  border-radius: 50%;
+}
+
+input[type="radio"] + label span,
+input[type="radio"]:checked + label span {
+  transition: background-color 200ms ease;
 }
 
 button,
@@ -884,6 +922,21 @@ input[type="button"]:focus {
   border-color: #115577;
 }
 
+#searchbox {
+  color: #000;
+  padding-bottom: 2rem;
+}
+#searchbox h3 {
+  margin-bottom: 0.25rem;
+}
+#searchbox input[type="text"] {
+  width: 100%;
+}
+#searchbox input,
+#searchbox button {
+  margin-bottom: 0.5em;
+}
+
 table {
   width: 100%;
   border-collapse: collapse;
@@ -894,7 +947,6 @@ table.data {
 }
 table th,
 table td {
-  min-width: 5em;
   padding: 0.75em;
   border-bottom: 1px dashed #e0e0e0;
   vertical-align: top;
@@ -920,6 +972,24 @@ table td.label:after {
 table td:not(:first-child) a {
   font-size: 0.85em;
   word-break: break-all;
+}
+
+@media (min-width: 550px) {
+  table th,
+  table td {
+    min-width: 5em;
+  }
+  table th {
+    word-break: keep-all;
+    white-space: nowrap;
+  }
+}
+table.compact {
+  width: auto;
+}
+table.compact td {
+  padding: 0.25em;
+  border-bottom: none;
 }
 
 table.no-borders tbody tr:first-child {
@@ -1019,16 +1089,18 @@ header ul li {
   margin-top: 16px;
 }
 
-#searchbox {
-  color: #000;
-  margin-bottom: 2.5rem;
+#search {
+  padding-bottom: 1rem;
 }
-#searchbox input {
-  width: 100%;
+#search h3 {
+  margin-bottom: 0.25rem;
 }
-#searchbox input,
-#searchbox button {
-  margin-bottom: 0.25em;
+#search .examples {
+  display: block;
+  margin-bottom: 1rem;
+}
+#search #searchbox {
+  padding-bottom: 0;
 }
 
 .footer-push {
@@ -1352,27 +1424,6 @@ p.examples a:not(:last-child):after {
   content: ',\00a0';
 }
 
-.pvf-icon {
-  width: 16px;
-}
-
-.light {
-  color: #ccc;
-}
-
-.CodeMirror {
-  background-color: whitesmoke !important;
-  font-size: 0.8em;
-}
-
-table.sortable th.asc:before {
-  content: '\25b4';
-}
-
-table.sortable th.desc:before {
-  content: '\25be';
-}
-
 #results {
   margin-top: 2rem;
 }
@@ -1394,12 +1445,25 @@ table.sortable th.desc:before {
   border-bottom-color: transparent;
 }
 
-#content #search {
-  float: right;
-}
-
 #content #map {
   margin-bottom: 2em;
+}
+
+.pvf-icon {
+  width: 16px;
+}
+
+.CodeMirror {
+  background-color: whitesmoke !important;
+  font-size: 0.8em;
+}
+
+table.sortable th.asc:before {
+  content: '\25b4';
+}
+
+table.sortable th.desc:before {
+  content: '\25be';
 }
 
 * {

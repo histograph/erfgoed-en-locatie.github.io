@@ -20,7 +20,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 42px;
+  font-size: 38px;
   margin-bottom: 2rem;
   font-weight: 400;
   line-height: 1.2em;
@@ -37,6 +37,7 @@ h2 {
 
 h3 {
   font-size: 20px;
+  margin-bottom: 0.5rem;
   font-weight: 400;
   text-transform: uppercase;
   line-height: 1.3em;
@@ -57,9 +58,6 @@ h5 {
   font-size: 1em;
   margin-bottom: 1em;
   line-height: 1.5em;
-  //border-bottom-style: solid;
-  //border-bottom-width: 2px;
-  //padding-bottom: 2px;
 
   code {
     font-weight: normal;

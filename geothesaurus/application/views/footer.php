@@ -7,11 +7,7 @@ layout: php
     </div>
 
     <div class="table-block">
-        <footer id="footer">
-          <div class="container">
-            {% include footer.html %}
-          </div>
-        </footer>
+      {% include footer.html %}
     </div>
 
   </div>

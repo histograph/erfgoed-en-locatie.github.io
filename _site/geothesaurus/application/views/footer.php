@@ -3,9 +3,7 @@
     </div>
 
     <div class="table-block">
-        <footer id="footer">
-          <div class="container">
-            <footer id="footer">
+      <footer id="footer">
   <div class="container">
     <a href="/over-ons#contact">contact</a> | <a href="/over-ons">over ons</a>
   </div>
@@ -36,8 +34,6 @@
 </script>
 <noscript><p><img src="//stats.waag.org/piwik.php?idsite=12" style="border:0;" alt="" /></p></noscript>
 <!-- End Piwik Code -->
-          </div>
-        </footer>
     </div>
 
   </div>

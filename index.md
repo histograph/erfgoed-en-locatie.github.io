@@ -54,35 +54,3 @@ layout: "home"
 	</div>
 
 </div>
-
-<script type="text/javascript">
-	var keyHandlerMap = {
-			thesaurusSearch: thesaurusSearchKeyUp
-		};
-
-	function genericKeyHandler(e){
-		var target = e.target || e.srcElement,
-			handlerName = target.dataset.keyuphandler,
-			handler = keyHandlerMap[handlerName];
-
-		if(handler){
-			handler.call(target, e);
-		}
-	}
-
-	function thesaurusSearchKeyUp(e){
-		var enterCode = 13;
-
-		if(e.keyCode === enterCode){
-			search();
-			//location.href = '/thesaurus/#search=' + this.value
-		}
-	}
-
-	document.addEventListener('keyup', genericKeyHandler);
-
-	function search(){
-		var searchstring = document.getElementById('searchstring').value;
-		location.href = '/thesaurus/#search=' + searchstring;
-	}
-</script>

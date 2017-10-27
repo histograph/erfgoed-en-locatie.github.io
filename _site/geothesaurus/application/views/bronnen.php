@@ -8,11 +8,13 @@
       <a class="result" href="<?= $this->config->item('base_url') ?>bron/<?= $source['id'] ?>">
         <h5><?= $source['title'] ?></h5>
         <? if(isset($types[$source['id']])){ ?>
-          <div class="sourceinfo">
+          <table class="sourceinfo compact">
           <? foreach($types[$source['id']] as $type => $number){ ?>
-            <?= $type ?> <em><?= number_format($number,0,",",".") ?></em>
+            <?php if (!empty($type)) { ?>
+              <tr><td><?= $type ?>:</td><td><em><?= number_format($number,0,",",".") ?></em></td></tr>
+            <?php } ?>
           <? } ?>
-          </div>
+          </table>
         <? } ?>
           </a>
 
