@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+<title>ErfGeo | Nederlandse topografie door de&nbsp;tijd </title>
+
+<meta name="author" content="Waag Society">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link rel="icon" type="image/png" href="/assets/images/erfgeo.png">
+
+<script src="/assets/js/d3.v3.min.js"></script>
+
+<link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+  <div class="table-container">
+
+    <div class="table-block footer-push">
+      <header class="header-default">
+  <a href="/" class="logo">
+    <span>Erf</span>Geo</a>
+  </a>
+  <span id="toggle-main-menu"><span class="icon"></span></span>
+<nav id="main-menu">
+  
+    <ul>
+      
+        
+          <li class="has-sub-menu">
+            <a>Zoeken</a>
+            <ul class="sub-menu">
+              
+                  <li><a href="/thesaurus">Zoeken via kaart</a></li>
+              
+                  <li><a href="/geothesaurus">Tekstueel zoeken</a></li>
+              
+            </ul>
+          </li>
+        
+      
+        
+          <li><a href="/nieuws">Blog</a></li>
+        
+      
+        
+          <li><a href="/wat-hoe">Wat? Hoe?</a></li>
+        
+      
+        
+          <li><a href="/tools">Tools</a></li>
+        
+      
+    </ul>
+  
+</nav>
+<script type="text/javascript">
+document.getElementById("toggle-main-menu").onclick = function() {
+  document.getElementsByTagName("body")[0].classList.toggle("main-menu-active");
+};
+
+var itemsWithSubMenu = document.getElementsByClassName("has-sub-menu");
+for (var i = 0; i < itemsWithSubMenu.length; i++) {
+  itemsWithSubMenu[i].onclick = function() {
+    this.classList.toggle("active");
+  };
+}
+</script>
+</header>
+
+
+      <div class="container">
+        <div id="content" class="content-block">
+          <h1></h1>
+          
+          <p>#ErfGeo</p>
+
+<p>##tagline</p>
+
+<blockquote>
+  <p>Nederlandse topografie door de tijd</p>
+</blockquote>
+
+<p>Andere opties:</p>
+
+<ul>
+  <li>Veranderingen in de Nederlandse Topografie</li>
+  <li>Plaats en tijd - veranderingen in de Nederlandse topografie</li>
+</ul>
+
+<p>##op Homepage</p>
+
+<blockquote>
+  <p>ErfGeo toont de topografie van Nederland in de loop der tijd. Van Dorestad tot Lelystad, van Pieterskerk tot Nils Bohrweg 1, van Burgwal tot Bob Marleystraat, van Noviomagus tot Nijmegen en van Oude Niedorp tot Hollands Kroon.</p>
+
+  <p>Deze website ontsluit plaatsen, bestuurlijke eenheden, straten, adressen en zelfs gebouwen die ooit in Nederland hebben bestaan.</p>
+</blockquote>
+
+<p>#Wat voor data vind je in ErfGeo? Tien voorbeelden</p>
+
+<p>##1) Sircxsee en andere toponiemen</p>
+
+<p>In oude bronnen kom je soms plaatsnamen tegen waar je als mens toch even over na moet denken. Cuelborch, dat zal Culemborch zijn. Gaude is Gouda, Haghe Den Haag, Swol Zwolle en Sircxsee, dat is <a href="http://geothesaurus.nl/hgconcept/tgn/7030107">Zierikzee</a>. Voor een computer wordt dat al erg lastig. En dat Weerdt op Valkenswaard slaat, Traiecto op Maastricht, Vorcum op Woudrichem en Buscoducis op Den Bosch, dat is voor zowel mens als machine zonder achterliggende kennis lastig te doorzien.</p>
+
+<p>Dankzij datasets als de rekeningen van de Illustre Lieve Vrouwe Broederschap, Militieregisters en het herkomstonderzoek van Simon Hart kent ErfGeo tienduizenden plaatsnaamvarianten. Alleen voor Zierikzee zijn het er al bijna twintig. Omdat we uit veel bronnen ook de periode kunnen halen waarin een naamvariant gebruikt werd, kan je mooi zien <a href="http://www.islandsofmeaning.nl/projects/names-in-time/?uri=http://vocab.getty.edu/tgn/7030107">wanneer</a> welke variant in zwang was.</p>
+
+<p><img src="ziericzee.png" alt="Ziericzee" /></p>
+
+<p>##2) De groei van Zwolle tussen 1200 en 2010</p>
+
+<p>De Atlas van de verstedelijking in Nederland toont van de 35 grootste steden van het land hoe zij in de loop der eeuwen expandeerden. De voor het boek gemaakte geometrieën zijn opgenomen in ErfGeo.</p>
+
+<p>Van <a href="http://geothesaurus.nl/hgconcept/tgn/7007077">Zwolle</a> zijn bijvoorbeeld geometrieën uit 1200, 1350, 1500, 1650, 1900, 1950, 1980 en 2010 beschikbaar.</p>
+
+<p><img src="zwolle.png" alt="Zwolle" /></p>
+
+<p>##3) Departementen uit de Franse Tijd</p>
+
+<p>In de Franse tijd is ook Nederland kortstondig ingedeeld in departementen. Bij een nieuwe indeling in 1811 werden de departementen vooral vernoemd naar waterlopen: Monden van de Rijn, Monden van de Schelde, Westereems, Zuiderzee, Boven-IJssel, etc. Alleen Friesland hield haar oude naam.</p>
+
+<p>Behalve de ligging der departementen laten <a href="http://histograph.io/viewer/#search=* type=hg:Departement">de geometrieën</a> ook mooi de toenmalige kustlijn zien. Zo zie je in de kop van departement Zuiderzeé het eiland Wieringen nog liggen.</p>
+
+<p><img src="departementen.png" alt="departementen" /></p>
+
+<p>##4) Overstroming, overstuiving, ontvolking en oorlog</p>
+
+<p>In de loop der eeuwen zijn veel dorpen en zelfs steden verdwenen. Veelal door overstromingen, maar ook zandverstuivingen, oorlogsgeweld, ontvolking en de vooruitgang eisten hun tol.</p>
+
+<p>Bijna 600 verdwenen dorpen zijn door Bert Stulp ten boek gesteld, en deze plaatsen zijn ook terug te vinden in ErfGeo.</p>
+
+<p><img src="saeftinge.png" alt="Saeftinghe" /></p>
+
+<p>##5) Van Abcoude naar De Ronde Venen - twee eeuwen gemeentelijke herindelingen</p>
+
+<p>Een purist spreekt niet van de gemeente Abcoude, want onduidelijk is dan of het over de gemeente Abcoude gaat die bestond tot 1818 of de gemeente Abcoude die bestond tussen 1941 en 2011. In de tussenliggende periode bestonden twee gemeentes met Abcoude in de naam: Abcoude-Proostdij en Abcoude-Baambrugge. In 2011 is Abcoude opgegaan in Ronde Venen.</p>
+
+<p>Van het tweede Abcoude is bovendien de grens nog een paar keer gewijzigd. Niet alleen al deze gemeentes, maar ook die veranderende grenzen, zijn te vinden in ErfGeo.</p>
+
+<p>##6) Huidig Nederland: plaatsen</p>
+
+<p>Uit verschillende bronnen hebben we Nederlandse plaatsen opgenomen. Belangrijkste leveranciers: Getty’s TGN en GeoNames. Het zijn er zo’n zevenduizend. Deze bronnen gebruiken we als basis waar het gaat om plaatsen: plaatsnaamvarianten uit historische bronnen kunnen we zo met de huidige plaats verbinden.</p>
+
+<p>##7) Huidig Nederland: straten</p>
+
+<p>Het Nationaal Wegenbestand, dat alle straten van Nederland bevat, is in ErfGeo opgenomen. Het feit dat het NWB van elke straat de geometrie bevat maakt dit bestand het startpunt voor iedereen die iets met straten wil.</p>
+
+<p>Ook hier geldt dat we zo een basis hebben waaraan we historische straatnamen kunnen verbinden.</p>
+
+<p><img src="nwb.png" alt="Nationaal Wegenbestand" /></p>
+
+<p>##8) Huidig Nederland: gebouwen en adressen</p>
+
+<p>De BAG (Basis Administratie Gebouwen en Adressen) bevat, zoals de naam al zegt, alle gebouwen en alle adressen van Nederland. Adressen zijn aangegeven met een puntlocatie, van elk gebouw is een polygoon beschikbaar.</p>
+
+<p>Aardig is dat de BAG niet alleen gegevens over de huidige stand van zaken bevat. Van elk pand is een bouwperiode opgenomen. Dit is verre van precies, en die precisie gaat bij bouwwerken van voor pakweg 1800 helemaal verloren, maar vanwege de landelijke dekking kan dit toch inzicht geven in de historie.</p>
+
+<p>##9) Buitenland</p>
+
+<p>We richten ons op Nederland, maar de Nederlandse geschiedenis houdt natuurlijk niet op bij de grens. Immers, onze geschiedenis is deels ook koloniaal, de grenzen liepen wel eens anders, het Nederlands taalgebied loopt tot in Frankrijk en de immigratie naar onze zeventiende-eeuwse steden was massaal.</p>
+
+<p>##10) Carnaval!</p>
+
+<p>schimpnamen, meertens en kloeke</p>
+
+<hr />
+
+<p>#De factor tijd toevoegen aan ErfGeo - tien voorbeelden</p>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="table-block">
+      <footer id="footer">
+  <div class="container">
+    <a href="/over-ons#contact">contact</a> | <a href="/over-ons">over ons</a>
+  </div>
+</footer>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-63876258-1', 'auto');
+  ga('send', 'pageview');
+</script>
+<!-- Piwik -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  _paq.push(["setDomains", ["*.erfgeo.nl"]]);
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//stats.waag.org/";
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['setSiteId', '12']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<noscript><p><img src="//stats.waag.org/piwik.php?idsite=12" style="border:0;" alt="" /></p></noscript>
+<!-- End Piwik Code -->
+    </div>
+
+  </div>
+</body>
+</html>
