@@ -15,7 +15,7 @@ if(isset($pit['uri'])){
 	$pitid = $pit['id'];
 }
 $props["type"] = $pit['type'];
-$props["permalink"] = '<input class="form-control" type="text" value="' . $this->config->item('base_url') . 'pit/?id=' . $pitid . '" readonly />';
+$props["permalink"] = '<input class="form-control" type="text" value="' . $_SERVER['SERVER_NAME'] . $this->config->item('base_url') . 'pit/?id=' . $pitid . '" readonly />';
 if(isset($pit['validSince'])){
 	if(is_array($pit['validSince'])){
 		$pit['validSince'] = "tussen " . implode(" en ", $pit['validSince']);
@@ -39,7 +39,7 @@ if(isset($pit['validUntil'])){
     <div class="six columns">
 
       <h3>Kenmerken</h3>
-      <table class="table table-striped">
+      <table class="data">
       <? foreach($props as $fieldname => $prop){ ?>
         <tr>
         <th><?= $fieldname ?></th>
@@ -50,7 +50,7 @@ if(isset($pit['validUntil'])){
 
       <h3>Additionele data uit bron</h3>
       <? if(isset($pit['data'])){ ?>
-        <table class="table table-striped">
+        <table class="data">
           <? foreach ($pit['data'] as $k => $v) { ?>
             <tr>
               <th><?= $k ?></th>
@@ -68,7 +68,7 @@ if(isset($pit['validUntil'])){
 
       <h3>Uitgaande relaties</h3>
       <? if(!empty($hairs)){ ?>
-        <table class="table table-striped">
+        <table class="data">
           <? foreach ($hairs as $hair) { ?>
             <tr>
               <th><?= $hair['relation'] ?></th>

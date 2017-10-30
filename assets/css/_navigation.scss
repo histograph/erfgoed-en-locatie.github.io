@@ -82,7 +82,7 @@ nav#main-menu {
     content: "";
     width: 0;
     height: 0;
-    border: 0.5rem solid transparent;
+    border: 0.6rem solid transparent;
     border-top-width: 0;
     border-bottom-color: $color-text;
     z-index: 1;
@@ -207,7 +207,6 @@ ul.sub-menu {
 }
 
 
-
 @media all and (min-width: $breakpoint-nav +1px) {
   #toggle-main-menu {
     display: none;
@@ -223,7 +222,7 @@ ul.sub-menu {
         content: "";
         width: 0;
         height: 0;
-        border: 0.5rem solid transparent;
+        border: 0.6rem solid transparent;
         opacity: 0;
         visibility: hidden;
         transition: all 100ms ease;

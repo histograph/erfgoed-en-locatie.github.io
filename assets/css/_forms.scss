@@ -1,3 +1,14 @@
+label,
+legend {
+  display: block;
+  margin-bottom: .5rem;
+}
+
+fieldset {
+  padding: 0;
+  border-width: 0;
+}
+
 input[type="email"],
 input[type="number"],
 input[type="search"],
@@ -36,21 +47,11 @@ textarea {
 }
 
 input[readonly] {
-    background-color: $color-box-item;
-    border-bottom: none !important;
-    font-size: 0.8em;
-    height: auto;
-}
-
-label,
-legend {
-  display: block;
-  margin-bottom: .5rem;
-}
-
-fieldset {
-  padding: 0;
-  border-width: 0;
+  margin-bottom: 0;
+  background-color: $color-box-item;
+  border-bottom: none !important;
+  font-size: 0.8em;
+  height: auto;
 }
 
 input[type="checkbox"],

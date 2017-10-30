@@ -12,7 +12,7 @@ $pvflabels = array("existence" => "bestaan", "geometry" => "geometrie", "toponym
   <p>&nbsp;</p>
 
   <h3>PiT's met een geometrie</h3>
-  <table class="data sortable">
+  <table class="sortable">
     <thead>
       <tr>
         <th>naam</th>
@@ -50,7 +50,7 @@ $pvflabels = array("existence" => "bestaan", "geometry" => "geometrie", "toponym
   </table>
 
   <h3>PiT's zonder geometrie</h3>
-  <table class="data sortable">
+  <table class="sortable">
     <thead>
       <tr>
         <th>naam</th>

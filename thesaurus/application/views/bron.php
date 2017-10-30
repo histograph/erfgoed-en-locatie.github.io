@@ -31,5 +31,7 @@
   </div>
 
 </div>
-
-<p><a href="<?= $this->config->item('base_url') ?>bronnen">bekijk alle bronnen</a></p>
+<br>
+<ul class="links">
+  <li><a href="<?= $this->config->item('base_url') ?>bronnen">bekijk alle bronnen</a></li>
+</ul>

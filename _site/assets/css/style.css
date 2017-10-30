@@ -426,7 +426,7 @@ optgroup {
   padding: 1rem;
 }
 
-@media (min-width: 550px) {
+@media (min-width: 640px) {
   .one.column,
   .one.columns {
     width: 8.33333%;
@@ -666,7 +666,7 @@ a:active, a:focus {
 }
 
 ul.links {
-  list-style: none;
+  list-style: none !important;
 }
 ul.links li {
   padding-left: 1em;
@@ -687,6 +687,17 @@ ul.links a {
 }
 ul.links a:hover {
   border-bottom-color: #000000;
+}
+
+label,
+legend {
+  display: block;
+  margin-bottom: .5rem;
+}
+
+fieldset {
+  padding: 0;
+  border-width: 0;
 }
 
 input[type="email"],
@@ -743,21 +754,11 @@ textarea {
 }
 
 input[readonly] {
+  margin-bottom: 0;
   background-color: whitesmoke;
   border-bottom: none !important;
   font-size: 0.8em;
   height: auto;
-}
-
-label,
-legend {
-  display: block;
-  margin-bottom: .5rem;
-}
-
-fieldset {
-  padding: 0;
-  border-width: 0;
 }
 
 input[type="checkbox"],
@@ -860,9 +861,6 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-table.data {
-  margin: 1.6em 0 3.2em 0;
-}
 table th,
 table td {
   padding: 0.75em;
@@ -890,6 +888,16 @@ table td.label:after {
 table td:not(:first-child) a {
   font-size: 0.85em;
   word-break: break-all;
+}
+table.data {
+  margin: 0 0 3.2em 0;
+}
+table.data tr:first-child th,
+table.data tr:first-child td {
+  border-top: 1px dashed #e0e0e0;
+}
+table.sortable {
+  margin: 1.6em 0 3.2em 0;
 }
 
 @media (min-width: 550px) {
@@ -1091,7 +1099,7 @@ nav#main-menu .has-sub-menu.active > ul.sub-menu {
   content: "";
   width: 0;
   height: 0;
-  border: 0.5rem solid transparent;
+  border: 0.6rem solid transparent;
   border-top-width: 0;
   border-bottom-color: #000000;
   z-index: 1;
@@ -1214,7 +1222,7 @@ ul.sub-menu {
     content: "";
     width: 0;
     height: 0;
-    border: 0.5rem solid transparent;
+    border: 0.6rem solid transparent;
     opacity: 0;
     visibility: hidden;
     transition: all 100ms ease;
