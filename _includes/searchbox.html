@@ -53,7 +53,7 @@
   function search(){
     var searchString = document.getElementById('searchstring').value;
     var searchType = document.querySelector('input[name="searchtype"]:checked').value;
-    var searchPath = (searchType === 'map') ? '/thesaurus/#search=' : '/geothesaurus/?q='
+    var searchPath = (searchType === 'map') ? '/kaart/#search=' : '/thesaurus/?q='
 
     if (searchString) {
       location.href = searchPath + searchString;

@@ -8,9 +8,9 @@ layout: "home"
 	<div class="six columns"><div class="content-block">
 		<h3><a href="/thesaurus">Thesaurus</a></h3>
 		<ul class="links">
-		<li><a href="/thesaurus">Zoek via de viewer</a></li>
-		<li><a href="/geothesaurus">Tekstueel zoeken in de geothesaurus</a></li>
-		<li><a href="/geothesaurus/bronnen">Overzicht gebruikte datasets</a></li>
+		<li><a href="/kaart">Zoek via de viewer</a></li>
+		<li><a href="/thesaurus">Tekstueel zoeken in de geothesaurus</a></li>
+		<li><a href="/thesaurus/bronnen">Overzicht gebruikte datasets</a></li>
 		</ul>
 	</div></div>
 
@@ -30,7 +30,7 @@ layout: "home"
 <div class="row">
 
 	<div class="six columns"><div class="content-block">
-		<h3><a href="/nieuws/index.html">Blog</a></h3>
+		<h3><a href="/blog">Blog</a></h3>
 		<ul class="links">
 		{% assign nieuws = site.nieuws | sort: 'priority' %}
 		{% for item in nieuws limit:2 %}
@@ -40,7 +40,7 @@ layout: "home"
 	</div></div>
 
 	<div class="six columns"><div class="content-block">
-		<h3><a href="/tools/index.html">Tools</a></h3>
+		<h3><a href="/tools">Tools</a></h3>
 		<ul class="links">
 		{% assign tools = site.tools | sort: 'priority' | reverse %}
 		{% for item in tools %}

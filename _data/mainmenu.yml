@@ -3,13 +3,13 @@
   submenuitems:
 
     - title: Zoeken via kaart
-      slug: thesaurus
+      slug: kaart
 
     - title: Tekstueel zoeken
-      slug: geothesaurus
+      slug: thesaurus
 
 - title: Blog
-  slug: nieuws
+  slug: blog
 
 - title: Wat? Hoe?
   slug: wat-hoe

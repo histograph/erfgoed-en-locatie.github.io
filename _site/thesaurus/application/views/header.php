@@ -40,16 +40,16 @@
             <a>Zoeken</a>
             <ul class="sub-menu">
               
-                  <li><a href="/thesaurus">Zoeken via kaart</a></li>
+                  <li><a href="/kaart">Zoeken via kaart</a></li>
               
-                  <li><a href="/geothesaurus">Tekstueel zoeken</a></li>
+                  <li><a href="/thesaurus">Tekstueel zoeken</a></li>
               
             </ul>
           </li>
         
       
         
-          <li><a href="/nieuws">Blog</a></li>
+          <li><a href="/blog">Blog</a></li>
         
       
         
@@ -135,7 +135,7 @@ for (var i = 0; i < itemsWithSubMenu.length; i++) {
   function search(){
     var searchString = document.getElementById('searchstring').value;
     var searchType = document.querySelector('input[name="searchtype"]:checked').value;
-    var searchPath = (searchType === 'map') ? '/thesaurus/#search=' : '/geothesaurus/?q='
+    var searchPath = (searchType === 'map') ? '/kaart/#search=' : '/thesaurus/?q='
 
     if (searchString) {
       location.href = searchPath + searchString;

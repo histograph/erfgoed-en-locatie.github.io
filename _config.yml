@@ -7,7 +7,7 @@ defaults:
     values:
       layout: default
 
-keep_files: [geothesaurus]
+keep_files: [thesaurus]
 
 sass:
   style: expanded

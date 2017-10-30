@@ -27,7 +27,7 @@ $config['api_url']	= 'https://api.histograph.io/';
 //$config['base_url']	= 'http://localhost:8888/erfgoedenlocatie/geothesaurus/';
 //$config['base_url']	= 'http://geothesaurus.nl/';
 //$config['base_url']	= 'http://thesaurus.erfgeo.nl/';
-$config['base_url']	= 'http://localhost:8000/geothesaurus/';
+$config['base_url']	= '/thesaurus/';
 
 
 
