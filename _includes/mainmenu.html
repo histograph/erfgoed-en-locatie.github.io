@@ -8,12 +8,12 @@
             <a>{{ item.title }}</a>
             <ul class="sub-menu">
               {% for subitem in item.submenuitems %}
-                  <li><a href="{{ subitem.slug }}">{{ subitem.title }}</a></li>
+                  <li><a href="/{{ subitem.slug }}">{{ subitem.title }}</a></li>
               {% endfor %}
             </ul>
           </li>
         {% else %}
-          <li><a href="{{ item.slug }}">{{ item.title }}</a></li>
+          <li><a href="/{{ item.slug }}">{{ item.title }}</a></li>
         {% endif %}
       {% endfor %}
     </ul>

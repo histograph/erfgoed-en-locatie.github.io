@@ -1,5 +1,6 @@
 <header class="header-home">
-  <div class="row">
+  <div class="flex">
+    <span></span>
     {% include mainmenu.html %}
   </div>
 
@@ -9,12 +10,12 @@
         <h1 class="logo"><span>Erf</span>Geo<sup>Beta</sup></h1>
         <h2>{{ site.data.style.slogan }}</h2>
       </div>
-      <div class="seven columns">
+      <div class="six columns">
         <p>Van Dorestad tot Lelystad, van Pieterskerk tot Nils&nbsp;Bohrweg&nbsp;1, van Burgwal tot Bob Marleystraat en van Oude&nbsp;Niedorp tot Hollands&nbsp;Kroon.</p>
         <p>Elke plaats, bestuurlijke eenheid, straat, zelfs elk gebouw en elk adres dat ooit in Nederland bestaan heeft kennen - dat is onze ambitie.</p>
       </div>
     </div>
-    <div class="row" id="search">
+    <div id="search">
       {% include searchbox.html %}
       <small class="examples">Bijvoorbeeld:
           <a href="/thesaurus/#search=%22Heyloe%22">Heyloe</a>, 

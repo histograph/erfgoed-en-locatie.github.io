@@ -2,7 +2,7 @@
 <html lang="nl">
 <head>
 <meta charset="utf-8">
-<title>ErfGeo | Nederlandse topografie door de tijd </title>
+<title>ErfGeo | Nederlandse topografie door de&nbsp;tijd </title>
 <meta name="description" content="ErfGeo. Nederlandse topografie door de tijd (beta)">
 <meta name="author" content="Waag Society">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -17,7 +17,8 @@
   <div class="table-container">
     <div class="table-block footer-push">
       <header class="header-home">
-  <div class="row">
+  <div class="flex">
+    <span></span>
     <span id="toggle-main-menu"><span class="icon"></span></span>
 <nav id="main-menu">
   
@@ -28,24 +29,24 @@
             <a>Zoeken</a>
             <ul class="sub-menu">
               
-                  <li><a href="thesaurus">Zoeken via kaart</a></li>
+                  <li><a href="/thesaurus">Zoeken via kaart</a></li>
               
-                  <li><a href="geothesaurus">Tekstueel zoeken</a></li>
+                  <li><a href="/geothesaurus">Tekstueel zoeken</a></li>
               
             </ul>
           </li>
         
       
         
-          <li><a href="nieuws">Blog</a></li>
+          <li><a href="/nieuws">Blog</a></li>
         
       
         
-          <li><a href="wat-hoe">Wat? Hoe?</a></li>
+          <li><a href="/wat-hoe">Wat? Hoe?</a></li>
         
       
         
-          <li><a href="tools">Tools</a></li>
+          <li><a href="/tools">Tools</a></li>
         
       
     </ul>
@@ -69,16 +70,16 @@ for (var i = 0; i < itemsWithSubMenu.length; i++) {
     <div class="row" id="mission">
       <div class="five columns">
         <h1 class="logo"><span>Erf</span>Geo<sup>Beta</sup></h1>
-        <h2>Nederlandse topografie door de tijd</h2>
+        <h2>Nederlandse topografie door de&nbsp;tijd</h2>
       </div>
-      <div class="seven columns">
+      <div class="six columns">
         <p>Van Dorestad tot Lelystad, van Pieterskerk tot Nils&nbsp;Bohrweg&nbsp;1, van Burgwal tot Bob Marleystraat en van Oude&nbsp;Niedorp tot Hollands&nbsp;Kroon.</p>
         <p>Elke plaats, bestuurlijke eenheid, straat, zelfs elk gebouw en elk adres dat ooit in Nederland bestaan heeft kennen - dat is onze ambitie.</p>
       </div>
     </div>
-    <div class="row" id="search">
+    <div id="search">
       <div id="searchbox">
-  <div class="row-flex">
+  <div class="flex">
     <input type="text" id="searchstring" placeholder="plaatsnaam, straatnaam, etc." data-keyuphandler="thesaurusSearch"/>
     <button onclick="search();">Zoek</button>
   </div>
@@ -154,21 +155,19 @@ for (var i = 0; i < itemsWithSubMenu.length; i++) {
 
 
       <div class="container">
+        
         <div class="row">
-          <div class="two-third column">
-            
-            <div class="row-flex">
 
-	<div class="six columns content-block">
+	<div class="six columns"><div class="content-block">
 		<h3><a href="/thesaurus">Thesaurus</a></h3>
 		<ul class="links">
 		<li><a href="/thesaurus">Zoek via de viewer</a></li>
 		<li><a href="/geothesaurus">Tekstueel zoeken in de geothesaurus</a></li>
 		<li><a href="/geothesaurus/bronnen">Overzicht gebruikte datasets</a></li>
 		</ul>
-	</div>
+	</div></div>
 
-	<div class="six columns content-block">
+	<div class="six columns"><div class="content-block">
 		<h3><a href="/wat-hoe/index.html">Wat? Hoe?</a></h3>
 		<ul class="links">
 		
@@ -179,13 +178,13 @@ for (var i = 0; i < itemsWithSubMenu.length; i++) {
 		
 		<li><a href="/wat-hoe/">Meer...</a></li>
 		</ul>
-	</div>
+	</div></div>
 
 </div>
 
-<div class="row-flex">
+<div class="row">
 
-	<div class="six columns content-block">
+	<div class="six columns"><div class="content-block">
 		<h3><a href="/nieuws/index.html">Blog</a></h3>
 		<ul class="links">
 		
@@ -195,9 +194,9 @@ for (var i = 0; i < itemsWithSubMenu.length; i++) {
 		  <li><a href="/nieuws/hacking-heritage-talk.html">Hacking Heritage Talk 17 September</a></li>
 		
 		</ul>
-	</div>
+	</div></div>
 
-	<div class="six columns content-block">
+	<div class="six columns"><div class="content-block">
 		<h3><a href="/tools/index.html">Tools</a></h3>
 		<ul class="links">
 		
@@ -215,12 +214,10 @@ for (var i = 0; i < itemsWithSubMenu.length; i++) {
 		  
 		
 		</ul>
-	</div>
+	</div></div>
 
 </div>
 
-          </div>
-        </div>
       </div>
 
     </div>

@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>ErfGeo | Nederlandse topografie door de tijd </title>
+<title>ErfGeo | Nederlandse topografie door de&nbsp;tijd </title>
 
 <meta name="author" content="Waag Society">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -40,24 +40,24 @@
             <a>Zoeken</a>
             <ul class="sub-menu">
               
-                  <li><a href="thesaurus">Zoeken via kaart</a></li>
+                  <li><a href="/thesaurus">Zoeken via kaart</a></li>
               
-                  <li><a href="geothesaurus">Tekstueel zoeken</a></li>
+                  <li><a href="/geothesaurus">Tekstueel zoeken</a></li>
               
             </ul>
           </li>
         
       
         
-          <li><a href="nieuws">Blog</a></li>
+          <li><a href="/nieuws">Blog</a></li>
         
       
         
-          <li><a href="wat-hoe">Wat? Hoe?</a></li>
+          <li><a href="/wat-hoe">Wat? Hoe?</a></li>
         
       
         
-          <li><a href="tools">Tools</a></li>
+          <li><a href="/tools">Tools</a></li>
         
       
     </ul>
@@ -81,7 +81,7 @@ for (var i = 0; i < itemsWithSubMenu.length; i++) {
       <div class="container">
         <div id="content" class="wide">
         <div id="searchbox">
-  <div class="row-flex">
+  <div class="flex">
     <input type="text" id="searchstring" placeholder="plaatsnaam, straatnaam, etc." data-keyuphandler="thesaurusSearch"/>
     <button onclick="search();">Zoek</button>
   </div>

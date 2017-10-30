@@ -11,6 +11,12 @@ header {
     z-index: 1000;
   }
 
+  &.header-home {
+    > .container {
+      margin-top: 1rem;
+    }
+  }
+
   .logo {
     span {
       font-weight: 700;
@@ -55,19 +61,6 @@ header {
     }
   }
 }
-
-#mainmenu {
-  float: right;
-
-  a.menu-item {
-    margin-right: 1rem;
-    text-transform: uppercase;
-    letter-spacing: 0.15em;
-    font-size: 0.85em;
-    line-height: $height-header;
-  }
-}
-
 
 // home
 #mission{

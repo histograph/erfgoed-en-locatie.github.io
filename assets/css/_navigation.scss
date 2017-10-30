@@ -24,6 +24,8 @@ nav#main-menu {
       > a {
         display: block;
         line-height: $height-header;
+        letter-spacing: 0.15em;
+        font-size: 0.85em;
         text-transform: uppercase;
         text-decoration: none;
         border-bottom: none;
@@ -40,7 +42,7 @@ nav#main-menu {
 
     > li {
       display: inline-block;
-      padding: 0 0.4rem;
+      padding: 0 0.6rem;
     }
   }
   .has-sub-menu {
@@ -148,7 +150,6 @@ ul.sub-menu {
     transition: all 100ms ease;
 
     > ul {
-      
       background-color: $color-text;
 
       li a {

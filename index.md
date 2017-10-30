@@ -3,18 +3,18 @@ description: "ErfGeo. Nederlandse topografie door de tijd (beta)"
 layout: "home"
 ---
 
-<div class="row-flex">
+<div class="row">
 
-	<div class="six columns content-block">
+	<div class="six columns"><div class="content-block">
 		<h3><a href="/thesaurus">Thesaurus</a></h3>
 		<ul class="links">
 		<li><a href="/thesaurus">Zoek via de viewer</a></li>
 		<li><a href="/geothesaurus">Tekstueel zoeken in de geothesaurus</a></li>
 		<li><a href="/geothesaurus/bronnen">Overzicht gebruikte datasets</a></li>
 		</ul>
-	</div>
+	</div></div>
 
-	<div class="six columns content-block">
+	<div class="six columns"><div class="content-block">
 		<h3><a href="/wat-hoe/index.html">Wat? Hoe?</a></h3>
 		<ul class="links">
 		{% assign wathoe = site.wat-hoe | sort: 'priority' %}
@@ -23,13 +23,13 @@ layout: "home"
 		{% endfor %}
 		<li><a href="/wat-hoe/">Meer...</a></li>
 		</ul>
-	</div>
+	</div></div>
 
 </div>
 
-<div class="row-flex">
+<div class="row">
 
-	<div class="six columns content-block">
+	<div class="six columns"><div class="content-block">
 		<h3><a href="/nieuws/index.html">Blog</a></h3>
 		<ul class="links">
 		{% assign nieuws = site.nieuws | sort: 'priority' %}
@@ -37,9 +37,9 @@ layout: "home"
 		  <li><a href="{{ item.url }}">{{ item.title }}</a></li>
 		{% endfor %}
 		</ul>
-	</div>
+	</div></div>
 
-	<div class="six columns content-block">
+	<div class="six columns"><div class="content-block">
 		<h3><a href="/tools/index.html">Tools</a></h3>
 		<ul class="links">
 		{% assign tools = site.tools | sort: 'priority' | reverse %}
@@ -51,6 +51,6 @@ layout: "home"
 		  {% endif %}
 		{% endfor %}
 		</ul>
-	</div>
+	</div></div>
 
 </div>

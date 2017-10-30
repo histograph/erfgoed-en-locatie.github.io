@@ -120,6 +120,13 @@ pre > code {
   white-space: pre;
 }
 
+
+ol,
+ul {
+  padding-left: 0;
+  margin-top: 0;
+}
+
 #content {
   ul {
     list-style: circle inside;
@@ -129,10 +136,6 @@ pre > code {
     list-style: decimal inside;
   }
 
-  ol, ul {
-    padding-left: 0;
-    margin-top: 0;
-  }
   ul ul,
   ul ol,
   ol ol,
@@ -168,10 +171,10 @@ form {
 
 ::-moz-selection {
   color: #FFF;
-  background: $color-secondary;
+  background: $color-text;
 }
 
 ::selection {
   color: #FFF;
-  background: $color-secondary;
+  background: $color-text;
 }
