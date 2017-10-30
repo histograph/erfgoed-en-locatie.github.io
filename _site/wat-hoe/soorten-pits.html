@@ -108,26 +108,26 @@ Om dat goed te kunnen doen zijn verschillende soorten PiTs gedefiniëerd. Op dit
 <h3 id="zoek-naar-de-gemeente-woerden">Zoek naar de gemeente “Woerden”</h3>
 
 <ul>
-  <li><a href="http://erfgeo.nl/thesaurus/#search=woerden%20type=hg:Municipality">erfgeo.nl/thesaurus/#search=woerden type=hg:Municipality</a></li>
+  <li><a href="http://erfgeo.nl/kaart/#search=woerden%20type=hg:Municipality">erfgeo.nl/kaart/#search=woerden type=hg:Municipality</a></li>
 </ul>
 
 <h3 id="zoek-naar-plaatsen-die-woerden-in-hun-naam-hebben">Zoek naar plaatsen die “Woerden” in hun naam hebben</h3>
 
 <ul>
-  <li><a href="http://erfgeo.nl/thesaurus/#search=woerden%20type=hg:Place">erfgeo.nl/thesaurus/#search=woerden type=hg:Place</a></li>
+  <li><a href="http://erfgeo.nl/kaart/#search=woerden%20type=hg:Place">erfgeo.nl/kaart/#search=woerden type=hg:Place</a></li>
 </ul>
 
 <h3 id="zoek-naar-straten-die-woerden-bevatten">Zoek naar straten die “Woerden” bevatten</h3>
 
 <ul>
-  <li><a href="http://erfgeo.nl/thesaurus/#search=woerden%20type=hg:Street">erfgeo.nl/thesaurus/#search=woerden type=hg:Street</a></li>
+  <li><a href="http://erfgeo.nl/kaart/#search=woerden%20type=hg:Street">erfgeo.nl/kaart/#search=woerden type=hg:Street</a></li>
 </ul>
 
 <p>Ook hele andere dingen zijn mogelijk:</p>
 
 <h3 id="laat-alle-provincies-zien">Laat alle provincies zien</h3>
 <ul>
-  <li><a href="http://erfgeo.nl/thesaurus/#search=*%20type=hg:Province">erfgeo.nl/thesaurus/#search=*%20type=hg:Province</a></li>
+  <li><a href="http://erfgeo.nl/kaart/#search=*%20type=hg:Province">erfgeo.nl/kaart/#search=*%20type=hg:Province</a></li>
 </ul>
 
 <h2 id="hierarchische-relatie-tussen-pits">Hierarchische relatie tussen PiTs</h2>
@@ -137,23 +137,25 @@ Het komt voor dat sommige typen PiTs slechts een beperkte periode in een bepaald
 
 <p>In de Frans-Bataafse tijd waren er in de Nederlanden geen provincies maar had je departementen, dus moet alleen voor die periode de volgende relatie kunnen bestaan:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> "hierarchy": [
+<div class="highlighter-rouge"><pre class="highlight"><code> "hierarchy": [
        "hg:Place",
        "hg:Municipality",
        "hg:Departement",
        "hg:Country"
      ]
-</code></pre></div></div>
+</code></pre>
+</div>
 
 <p>En na 1815 ziet dat er dan als volgt uit:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"hierarchy": [
+<div class="highlighter-rouge"><pre class="highlight"><code>"hierarchy": [
       "hg:Place",
       "hg:Municipality",
       "hg:Province",
       "hg:Country"
     ]
-</code></pre></div></div>
+</code></pre>
+</div>
 
 <p>De hierarchieën die gehanteerd worden zullen via <a href="https://raw.githubusercontent.com/histograph/schemas/master/ontology/hierarchies.json" title="hierarchies.json file op github">deze link</a> terug te vinden zijn.</p>
 

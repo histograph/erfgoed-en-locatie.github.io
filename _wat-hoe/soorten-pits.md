@@ -37,20 +37,20 @@ Naar al deze types kan ook specifiek gezocht worden:
 
 ### Zoek naar de gemeente "Woerden"
 
-- <a href="http://erfgeo.nl/thesaurus/#search=woerden%20type=hg:Municipality">erfgeo.nl/thesaurus/#search=woerden type=hg:Municipality</a>
+- <a href="http://erfgeo.nl/kaart/#search=woerden%20type=hg:Municipality">erfgeo.nl/kaart/#search=woerden type=hg:Municipality</a>
 
 ### Zoek naar plaatsen die "Woerden" in hun naam hebben
 
-- <a href="http://erfgeo.nl/thesaurus/#search=woerden%20type=hg:Place">erfgeo.nl/thesaurus/#search=woerden type=hg:Place</a>
+- <a href="http://erfgeo.nl/kaart/#search=woerden%20type=hg:Place">erfgeo.nl/kaart/#search=woerden type=hg:Place</a>
 
 ### Zoek naar straten die "Woerden" bevatten
 
-- <a href="http://erfgeo.nl/thesaurus/#search=woerden%20type=hg:Street">erfgeo.nl/thesaurus/#search=woerden type=hg:Street</a>
+- <a href="http://erfgeo.nl/kaart/#search=woerden%20type=hg:Street">erfgeo.nl/kaart/#search=woerden type=hg:Street</a>
 
 Ook hele andere dingen zijn mogelijk:
 
 ### Laat alle provincies zien
-- <a href="http://erfgeo.nl/thesaurus/#search=*%20type=hg:Province">erfgeo.nl/thesaurus/#search=*%20type=hg:Province</a>
+- <a href="http://erfgeo.nl/kaart/#search=*%20type=hg:Province">erfgeo.nl/kaart/#search=*%20type=hg:Province</a>
 
 ## Hierarchische relatie tussen PiTs
 

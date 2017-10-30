@@ -28,7 +28,7 @@ Van [Zwolle](http://thesaurus.erfgeo.nl/hgconcept/?id=http://vocab.getty.edu/tgn
 
 In de Franse tijd is ook Nederland kortstondig ingedeeld in departementen. Bij een nieuwe indeling in 1811 werden de departementen vooral vernoemd naar waterlopen: Monden van de Rijn, Monden van de Schelde, Westereems, Zuiderzee, Boven-IJssel, etc. Alleen Friesland hield haar oude naam.
 
-Behalve de ligging der departementen laten de geometrieën ook mooi de toenmalige kustlijn zien. Zo zie je in de kop van departement Zuiderzeé het eiland Wieringen nog liggen. Je kan alle departementen tevoorschijn halen door naar de [viewer](http://erfgeo.nl/thesaurus/) te gaan en `*&type=hg:Departement` in het zoekboxje te typen.
+Behalve de ligging der departementen laten de geometrieën ook mooi de toenmalige kustlijn zien. Zo zie je in de kop van departement Zuiderzeé het eiland Wieringen nog liggen. Je kan alle departementen tevoorschijn halen door naar de [viewer](http://erfgeo.nl/kaart/) te gaan en `*&type=hg:Departement` in het zoekboxje te typen.
 
 ![departementen](/assets/images/departementen.png)
 
@@ -66,8 +66,8 @@ Aardig is dat de BAG niet alleen gegevens over de huidige stand van zaken bevat 
 
 ## Buitenland
 
-We richten ons op Nederland, maar de Nederlandse geschiedenis houdt natuurlijk niet op bij de grens. Immers, onze geschiedenis is deels ook koloniaal, de grenzen liepen wel eens anders, het Nederlands taalgebied loopt tot in Frankrijk en de immigratie naar onze zeventiende-eeuwse steden was massaal. Daarom zul je af en toe ook iets buiten de grenzen aantreffen. Om een begin te maken zijn alvast de grenzen van landen na 1945 in ErfGeo opgenomen - dat zijn dus [drie duitslanden](http://erfgeo.nl/thesaurus/#search=germany)!
+We richten ons op Nederland, maar de Nederlandse geschiedenis houdt natuurlijk niet op bij de grens. Immers, onze geschiedenis is deels ook koloniaal, de grenzen liepen wel eens anders, het Nederlands taalgebied loopt tot in Frankrijk en de immigratie naar onze zeventiende-eeuwse steden was massaal. Daarom zul je af en toe ook iets buiten de grenzen aantreffen. Om een begin te maken zijn alvast de grenzen van landen na 1945 in ErfGeo opgenomen - dat zijn dus [drie duitslanden](http://erfgeo.nl/kaart/#search=germany)!
 
 ## Carnaval!
 
-Omdat we (in ieder geval de Brabanders onder ons) ook Carnavalsnamen tot ons cultureel erfgoed rekenen, hebben we ook de plaatsnamen zoals ze gedurende die periode gebezigd worden opgenomen. Dus, altijd al willen weten waar [Bonenpikkerslaand](http://erfgeo.nl/thesaurus/#search=Bonenpikkerslaand) ligt, of [Wringersgat](http://erfgeo.nl/thesaurus/#search=Wringersgat)? Dan ligt ook die informatie nu voor je open.
+Omdat we (in ieder geval de Brabanders onder ons) ook Carnavalsnamen tot ons cultureel erfgoed rekenen, hebben we ook de plaatsnamen zoals ze gedurende die periode gebezigd worden opgenomen. Dus, altijd al willen weten waar [Bonenpikkerslaand](http://erfgeo.nl/kaart/#search=Bonenpikkerslaand) ligt, of [Wringersgat](http://erfgeo.nl/kaart/#search=Wringersgat)? Dan ligt ook die informatie nu voor je open.
