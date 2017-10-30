@@ -1,4 +1,33 @@
-<nav id="mainmenu">{% for item in site.data.menu %}
-{% assign url = page.url | replace_first:'/','' | split:"/" | first %}
-<a class="menu-item {% if item.name == url %} current{% endif %}" href="{{ site.baseurl }}/{{ item.name }}">{{item.title}}</a>
-{% endfor %}</nav>
+<span id="toggle-main-menu"><span class="icon"></span></span>
+<nav id="main-menu">
+  {% if site.data.mainmenu[0] %}
+    <ul>
+      {% for item in site.data.mainmenu %}
+        {% if item.submenuitems[0] %}
+          <li class="has-sub-menu">
+            <a>{{ item.title }}</a>
+            <ul class="sub-menu">
+              {% for subitem in item.submenuitems %}
+                  <li><a href="{{ subitem.slug }}">{{ subitem.title }}</a></li>
+              {% endfor %}
+            </ul>
+          </li>
+        {% else %}
+          <li><a href="{{ item.slug }}">{{ item.title }}</a></li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  {% endif %}
+</nav>
+<script type="text/javascript">
+document.getElementById("toggle-main-menu").onclick = function() {
+  document.getElementsByTagName("body")[0].classList.toggle("main-menu-active");
+};
+
+var itemsWithSubMenu = document.getElementsByClassName("has-sub-menu");
+for (var i = 0; i < itemsWithSubMenu.length; i++) {
+  itemsWithSubMenu[i].onclick = function() {
+    this.classList.toggle("active");
+  };
+}
+</script>

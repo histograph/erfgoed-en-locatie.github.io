@@ -1,0 +1,19 @@
+- title: Zoeken
+
+  submenuitems:
+
+    - title: Zoeken via kaart
+      slug: thesaurus
+
+    - title: Tekstueel zoeken
+      slug: geothesaurus
+
+- title: Blog
+  slug: nieuws
+
+- title: Wat? Hoe?
+  slug: wat-hoe
+
+- title: Tools
+  slug: tools
+

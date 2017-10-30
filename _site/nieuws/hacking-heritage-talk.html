@@ -20,19 +20,51 @@
   <a href="/" class="logo">
     <span>Erf</span>Geo</a>
   </a>
-  <nav id="mainmenu">
-
-<a class="menu-item " href="/thesaurus">Thesaurus</a>
-
-
-<a class="menu-item  current" href="/nieuws">Blog</a>
-
-
-<a class="menu-item " href="/wat-hoe">Wat? Hoe?</a>
-
-
-<a class="menu-item " href="/tools">Tools</a>
+  <span id="toggle-main-menu"><span class="icon"></span></span>
+<nav id="main-menu">
+  
+    <ul>
+      
+        
+          <li class="has-sub-menu">
+            <a>Zoeken</a>
+            <ul class="sub-menu">
+              
+                  <li><a href="thesaurus">Zoeken via kaart</a></li>
+              
+                  <li><a href="geothesaurus">Tekstueel zoeken</a></li>
+              
+            </ul>
+          </li>
+        
+      
+        
+          <li><a href="nieuws">Blog</a></li>
+        
+      
+        
+          <li><a href="wat-hoe">Wat? Hoe?</a></li>
+        
+      
+        
+          <li><a href="tools">Tools</a></li>
+        
+      
+    </ul>
+  
 </nav>
+<script type="text/javascript">
+document.getElementById("toggle-main-menu").onclick = function() {
+  document.getElementsByTagName("body")[0].classList.toggle("main-menu-active");
+};
+
+var itemsWithSubMenu = document.getElementsByClassName("has-sub-menu");
+for (var i = 0; i < itemsWithSubMenu.length; i++) {
+  itemsWithSubMenu[i].onclick = function() {
+    this.classList.toggle("active");
+  };
+}
+</script>
 </header>
 
 

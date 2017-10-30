@@ -18,19 +18,51 @@
     <div class="table-block footer-push">
       <header class="header-home">
   <div class="row">
-    <nav id="mainmenu">
-
-<a class="menu-item " href="/thesaurus">Thesaurus</a>
-
-
-<a class="menu-item " href="/nieuws">Blog</a>
-
-
-<a class="menu-item " href="/wat-hoe">Wat? Hoe?</a>
-
-
-<a class="menu-item " href="/tools">Tools</a>
+    <span id="toggle-main-menu"><span class="icon"></span></span>
+<nav id="main-menu">
+  
+    <ul>
+      
+        
+          <li class="has-sub-menu">
+            <a>Zoeken</a>
+            <ul class="sub-menu">
+              
+                  <li><a href="thesaurus">Zoeken via kaart</a></li>
+              
+                  <li><a href="geothesaurus">Tekstueel zoeken</a></li>
+              
+            </ul>
+          </li>
+        
+      
+        
+          <li><a href="nieuws">Blog</a></li>
+        
+      
+        
+          <li><a href="wat-hoe">Wat? Hoe?</a></li>
+        
+      
+        
+          <li><a href="tools">Tools</a></li>
+        
+      
+    </ul>
+  
 </nav>
+<script type="text/javascript">
+document.getElementById("toggle-main-menu").onclick = function() {
+  document.getElementsByTagName("body")[0].classList.toggle("main-menu-active");
+};
+
+var itemsWithSubMenu = document.getElementsByClassName("has-sub-menu");
+for (var i = 0; i < itemsWithSubMenu.length; i++) {
+  itemsWithSubMenu[i].onclick = function() {
+    this.classList.toggle("active");
+  };
+}
+</script>
   </div>
 
   <div class="container">
@@ -40,7 +72,7 @@
         <h2>Nederlandse topografie door de tijd</h2>
       </div>
       <div class="seven columns">
-        <p>Van Dorestad tot Lelystad, van Pieterskerk tot Nils&nbsp;Bohrweg&nbsp;1, van Burgwal tot Bob Marleystraat en van Oude&nbsp;Niedorp tot Hollands Kroon.</p>
+        <p>Van Dorestad tot Lelystad, van Pieterskerk tot Nils&nbsp;Bohrweg&nbsp;1, van Burgwal tot Bob Marleystraat en van Oude&nbsp;Niedorp tot Hollands&nbsp;Kroon.</p>
         <p>Elke plaats, bestuurlijke eenheid, straat, zelfs elk gebouw en elk adres dat ooit in Nederland bestaan heeft kennen - dat is onze ambitie.</p>
       </div>
     </div>
