@@ -10,7 +10,7 @@ class Hgconcept extends CI_Controller {
 
 	public function index(){
 
-		$id = $_REQUEST['id'];
+		$id = $_GET['id'];
 
 		if(!isset($_SERVER['HTTP_ACCEPT'])){ 							// they don't specify, serve html
 			$this->html();
@@ -28,7 +28,7 @@ class Hgconcept extends CI_Controller {
 
 	public function html(){
 		date_default_timezone_set('Europe/Amsterdam');
-		$id = $_REQUEST['id'];
+		$id = $_GET['id'];
 
 		
 		

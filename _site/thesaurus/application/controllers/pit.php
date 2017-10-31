@@ -27,7 +27,7 @@ class Pit extends CI_Controller {
 
 	public function html(){
 
-		$pitid = $_REQUEST['id'];
+		$pitid = $_GET['id'];
 
 		$searchstring = 'search?id=' . $pitid;
 		$json = file_get_contents($this->config->item('api_url') . $searchstring );
