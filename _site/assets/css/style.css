@@ -1301,6 +1301,7 @@ ul.sub-menu {
 #sidebar-container {
   left: 0;
   width: 450px;
+  max-width: calc(100% - 36px);
 }
 
 #graph-container {

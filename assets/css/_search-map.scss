@@ -23,6 +23,7 @@
 #sidebar-container {
   left: 0;
   width: $width-sidebar;
+  max-width: calc(100% - 36px);
 }
 
 #graph-container {
