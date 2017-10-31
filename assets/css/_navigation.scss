@@ -28,7 +28,7 @@ nav#main-menu {
         font-size: 0.85em;
         text-transform: uppercase;
         text-decoration: none;
-        border-bottom: none;
+        border-bottom-color: transparent;
         white-space: nowrap;
         cursor: pointer;
         -webkit-touch-callout: none;
@@ -43,6 +43,10 @@ nav#main-menu {
     > li {
       display: inline-block;
       padding: 0 0.6rem;
+
+      &.current a {
+        //text-decoration: underline;
+      }
     }
   }
   .has-sub-menu {

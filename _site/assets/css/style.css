@@ -1046,7 +1046,7 @@ nav#main-menu > ul li > a {
   font-size: 0.85em;
   text-transform: uppercase;
   text-decoration: none;
-  border-bottom: none;
+  border-bottom-color: transparent;
   white-space: nowrap;
   cursor: pointer;
   -webkit-touch-callout: none;

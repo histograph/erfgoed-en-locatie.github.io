@@ -18,7 +18,7 @@ Het in ErfGeo opgenomen Nationaal Wegenbestand (NWB) bevat alle huidige straten 
 
 Wat wel mogelijk is, is een PiT maken in een eigen dataset. Als we die een relatie geven met de PiT in kwestie en een beginjaar toevoegen, dan hebben we ons doel bereikt.
 
-<table>
+<table class="data">
 	<tr>
 		<th>id</th>
 		<td>1</td>
@@ -57,7 +57,7 @@ In De Rijp loopt, ten noorden van de hoofdstraat, een klein straatje dat 't Acht
 
 Met een PiT die de volgende velden bevat kunnen we die informatie toevoegen:
 
-<table>
+<table class="data">
 	<tr>
 		<th>id</th>
 		<td>2</td>
@@ -93,7 +93,7 @@ Ontginning van veen zorgde ervoor dat in de 12e eeuw het riviertje De Bamestra u
 
 Omdat ErfGeo nog geen PiT van de Beemstermeer bevat, maken we er eentje aan. En we geven de nieuwe PiT een geometrie. Een geometrie kan een punt, een lijn of een polygoon zijn. Een punt mag als twee velden (lengte- en breedtegraad) meegeleverd worden, in de andere gevallen is het verplicht geojson aan te leveren. Een tool als <a href="/tools/histodraw.html">Histodraw</a> of [geojson.io](http://geojson.io) maakt dat een relatief eenvoudige exercitie.
 
-<table>
+<table class="data">
 	<tr>
 		<th>id</th>
 		<td>5</td>
@@ -132,7 +132,7 @@ Tot dan de havenbuurt van Graft, splitste het rijker wordende De Rijp zich in 16
 
 Bij het leggen van de sameHgConcept relatie kan je verwijzen naar zowel een ErfGeo PiT id als een externe URI. Een PiT heeft alleen een id als ie geen URI heeft. De Thesaurus of Geographic Names heeft URIs, dus die gebruiken we hier om te verwijzen.
 
-<table>
+<table class="data">
 	<tr>
 		<th>id</th>
 		<td>3</td>
@@ -161,7 +161,7 @@ Bij het leggen van de sameHgConcept relatie kan je verwijzen naar zowel een ErfG
 
 
 
-<table>
+<table class="data">
 	<tr>
 		<th>id</th>
 		<td>4</td>
@@ -192,7 +192,7 @@ Bij het leggen van de sameHgConcept relatie kan je verwijzen naar zowel een ErfG
 
 In principe heeft elk gebouw in Nederland een BAG id. Maar er zijn ook gebouwen met een welluidender naam. Zo staat het pand met BAG id 365100000000350 bekend als 'De Arend', vanwege de arend die de top van het pand siert. Die informatie kunnen we als volgt opnemen:
 
-<table>
+<table class="data">
 	<tr>
 		<th>id</th>
 		<td>6</td>
@@ -215,7 +215,7 @@ In principe heeft elk gebouw in Nederland een BAG id. Maar er zijn ook gebouwen 
 
 Elke archivaris weet: een adres is een dynamisch ding. Niet alleen straten veranderen van naam, ook nummeringen willen nogal eens wijzigen. Hier geven we op dat het huidige adres Oosteinde 51, bij de BAG bekend onder id 0365200000001832, tussen 1961 en 2002 bekend stond als nummer 47.
 
-<table>
+<table class="data">
 	<tr>
 		<th>id</th>
 		<td>8</td>
@@ -252,7 +252,7 @@ Op 1 januari 2015 is de gemeente Graft-De Rijp opgegaan in de gemeente Alkmaar. 
 
 Met de sameHgConcept relatie koppelen we de nieuwe PiT aan de bestaande gemeente Graft-De Rijp PiT's, en met de absorbedBy relatie vertellen we dat de gemeente op haar einddatum is opgegaan in Alkmaar.
 
-<table>
+<table class="data">
 	<tr>
 		<th>id</th>
 		<td>7</td>

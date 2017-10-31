@@ -1,19 +1,24 @@
 <span id="toggle-main-menu"><span class="icon"></span></span>
 <nav id="main-menu">
+  {% assign url = page.url | replace_first:'/','' | split:"/" | first %}
   {% if site.data.mainmenu[0] %}
     <ul>
       {% for item in site.data.mainmenu %}
         {% if item.submenuitems[0] %}
-          <li class="has-sub-menu">
+          <li class="has-sub-menu{% if item.slug == url %} current{% endif %}">
             <a>{{ item.title }}</a>
             <ul class="sub-menu">
               {% for subitem in item.submenuitems %}
-                  <li><a href="/{{ subitem.slug }}">{{ subitem.title }}</a></li>
+                <li class="{% if subitem.slug == url %}current{% endif %}">
+                  <a href="/{{ subitem.slug }}">{{ subitem.title }}</a>
+                </li>
               {% endfor %}
             </ul>
           </li>
         {% else %}
-          <li><a href="/{{ item.slug }}">{{ item.title }}</a></li>
+          <li class="{% if item.slug == url %}current{% endif %}">
+            <a href="/{{ item.slug }}">{{ item.title }}</a>
+          </li>
         {% endif %}
       {% endfor %}
     </ul>
