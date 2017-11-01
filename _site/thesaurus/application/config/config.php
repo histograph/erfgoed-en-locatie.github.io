@@ -8,7 +8,7 @@
 | 
 */
 //$config['api_url']	= 'https://api.erfgeo.nl/';
-$config['api_url']	= 'https://api.histograph.io/';
+$config['api_url']	= 'http://localhost:3000/';
 
 /*
 |--------------------------------------------------------------------------

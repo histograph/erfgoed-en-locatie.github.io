@@ -86,7 +86,7 @@ class Pit extends CI_Controller {
 			$data['id'] .= "/" . $extId;
 		}
 
-		$apiurl = "https://api.histograph.io/search?";
+		$apiurl = "http://localhost:3000/search?";
 		$hgid = $source . '/' . $data['id'];
 		$searchstring = 'hgid=' . $hgid;
 		$json = file_get_contents($apiurl . $searchstring );

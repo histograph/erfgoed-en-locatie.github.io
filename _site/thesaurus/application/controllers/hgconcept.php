@@ -114,7 +114,7 @@ class Hgconcept extends CI_Controller {
 			$data['id'] .= "/" . $extId;
 		}
 
-		$apiurl = "https://api.histograph.io/search?";
+		$apiurl = "http://localhost:3000/search?";
 		
 		$searchstring = 'hgid=' . $source . '/' . $data['id'];
 		$json = file_get_contents($apiurl . $searchstring );
@@ -138,7 +138,7 @@ class Hgconcept extends CI_Controller {
 		}
 		$hgid = $source . '/' . $data['id'];
 
-		$apiurl = "https://api.histograph.io/search?";
+		$apiurl = "http://localhost:3000/search?";
 		
 		$searchstring = 'hgid=' . $hgid;
 		$json = file_get_contents($apiurl . $searchstring );
