@@ -15,7 +15,7 @@
   width: 100%;
   max-width: 1120px;
   margin: 2rem auto 0;
-  padding: 0 1.5rem;
+  padding: 0 0.75rem;
 }
 
 #content {
@@ -59,6 +59,11 @@
 }
 
 @media (min-width: 640px) {
+
+  .container {
+    padding: 0 1.5rem;
+  }
+
   .one.column,
   .one.columns     { width:   8.33333%; }
   .two.columns     { width:  16.66667%; }
